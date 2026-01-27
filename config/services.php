@@ -34,5 +34,9 @@ return [
             'channel' => env('SLACK_BOT_USER_DEFAULT_CHANNEL'),
         ],
     ],
+    'prismic' => [
+        'endpoint' => env('PRISMIC_ENDPOINT'),
+        'token' => env('PRISMIC_TOKEN'),
+    ],
 
 ];
