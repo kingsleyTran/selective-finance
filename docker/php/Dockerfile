@@ -31,3 +31,11 @@ COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 COPY docker/php/local.ini /usr/local/etc/php/conf.d/local.ini
 
 WORKDIR /var/www/html
+
+RUN mkdir -p storage/logs \
+ storage/framework/sessions \
+ storage/framework/cache \
+ bootstrap/cache \
+ && chown -R www-data:www-data /var/www/html
+
+USER www-data

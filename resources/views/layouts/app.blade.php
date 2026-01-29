@@ -1,15 +1,30 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
     <meta charset="utf-8" />
-    <title>{{ $title ?? 'Selective Finance' }}</title>
-    <meta name="description" content="{{ $description ?? '' }}">
-    @vite('resources/css/app.css')
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@yield('title', $title ?? config('app.name', 'Laravel'))</title>
+    <meta name="description" content="@yield('description', $description ?? '')">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
+
+    <!-- Styles / Scripts -->
+    @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @else
+        @vite('resources/css/app.css')
+    @endif
+
+    @stack('styles')
 </head>
 
 <body class="antialiased font-sans">
-    {{ $slot }}
+    @yield('content')
+
+    @stack('scripts')
 </body>
 
 </html>
