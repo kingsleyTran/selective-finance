@@ -21,8 +21,12 @@
     @stack('styles')
 </head>
 
-<body class="antialiased font-sans">
-    @yield('content')
+<body class="bg-light-yellow antialiased font-sans">
+    <x-navbar />
+
+    <main>
+      {{ $slot }}
+    </main>
 
     @stack('scripts')
 </body>

@@ -10,18 +10,41 @@ class PrismicService
 
     public function __construct()
     {
-        $this->api = Api::create(
+        $this->api = Api::get(
             config('services.prismic.endpoint'),
             config('services.prismic.token')
         );
     }
 
-    public function page(string $uid, string $type = 'page')
+    /**
+     * Get single page by Custom Type
+     */
+    public function getSingle(string $type)
     {
-        return cache()->remember(
-            "prismic:$type:$uid",
-            now()->addMinutes(10),
-            fn() => $this->api->getByUID($type, $uid)
+        return $this->api->getSingle($type);
+    }
+
+    /**
+     * Get page by UID (blog detail, service detail)
+     */
+    public function getByUID(string $type, string $uid)
+    {
+        return $this->api->getByUID($type, $uid);
+    }
+
+    public function getByID(string $id)
+    {
+        return $this->api->getByID($id);
+    }
+
+    /**
+     * Get list pages
+     */
+    public function getAll(string $type, int $pageSize = 10)
+    {
+        return $this->api->query(
+            \Prismic\Predicates::at('document.type', $type),
+            ['pageSize' => $pageSize]
         );
     }
 }
