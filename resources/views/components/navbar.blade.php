@@ -12,8 +12,8 @@
             <div class="flex flex-row items-center gap-2">
                 <nav
                     class="hidden md:flex items-center gap-8 border border-white/20 rounded-full bg-white/10 px-10 py-3">
-                    <x-nav-link href="/services">Our Services</x-nav-link>
-                    <x-nav-link href="/about">About Us</x-nav-link>
+                    <x-nav-link href="/our-services">Our Services</x-nav-link>
+                    <x-nav-link href="/about-us">About Us</x-nav-link>
                     <x-nav-link href="/blog">Blog</x-nav-link>
                 </nav>
 

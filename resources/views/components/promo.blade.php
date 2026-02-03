@@ -1,4 +1,4 @@
-<section class="py-32">
+<section class="pb-28">
     <div class="container mx-auto px-6">
 
         {{-- HEADER --}}
@@ -16,9 +16,9 @@
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-20 items-start">
 
             {{-- IMAGE --}}
-            <div class="lg:col-span-6 rounded-sm">
+            <div class="h-full lg:col-span-6 rounded-sm {{ $reverse ? 'lg:order-2' : 'lg:order-1' }}">
                 @if ($image)
-                    <img src="{{ $image }}" alt="" class="w-full object-cover rounded-sm" />
+                    <img src="{{ $image }}" alt="" class="h-full w-full object-cover rounded-sm" />
                 @endif
             </div>
 

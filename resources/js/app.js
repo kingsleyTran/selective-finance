@@ -37,9 +37,31 @@ document.addEventListener('DOMContentLoaded', () => {
         }).mount();
     }
 
+    const introSlider = document.querySelector('#intro-slider');
+    if (introSlider) {
+        new Splide(introSlider, {
+            type      : 'slide',
+            autoWidth: true,
+            gap: '1.5rem',
+            perPage   : 2.5,
+            autoplay  : true,
+            arrows    : false,
+            pagination: false,
+            interval  : 4000,
+            speed     : 600,
+            easing    : 'ease',
+            pauseOnHover: true,
+            breakpoints: {
+                1024: { perPage: 2.5 },
+                768: { perPage: 2 },
+                640: { perPage: 1 },
+            },
+        }).mount();
+    }
+
     const blogSlider = document.querySelector('#blog-slider');
     if (blogSlider) {
-        new Splide('#blog-slider', {
+        new Splide(blogSlider, {
             type      : 'slide',
             perPage   : 2.5,
             autoplay  : true,
