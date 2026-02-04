@@ -28,6 +28,7 @@ class Services extends Component
                 'slug' => $service->slugs[0],
                 'title' => $data->title[0] ? $data->title[0]->text : '',
                 'image' => $data->image->url ?? '',
+                'icon' => $data->icon->url ?? '',
                 'description' => $data->description[0] ? $data->description[0]->text : '',
             ];
         }

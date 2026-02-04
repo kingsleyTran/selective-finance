@@ -14,6 +14,7 @@ class Promo extends Component
     public string $image;
     public array $items;
     public bool $reverse;
+    public bool $titleTop;
 
     /**
      * Create a new component instance.
@@ -24,7 +25,8 @@ class Promo extends Component
         string $description,
         string $image,
         array $items,
-        bool $reverse = false
+        bool $reverse = false,
+        ?bool $titleTop = true
     ) {
         $this->title = $title;
         $this->subtitle = $subtitle;
@@ -37,6 +39,7 @@ class Promo extends Component
             ];
         }
         $this->reverse = $reverse;
+        $this->titleTop = $titleTop;
     }
 
     /**

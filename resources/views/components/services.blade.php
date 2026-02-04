@@ -15,7 +15,7 @@
         <div class="grid grid-cols-1 gap-16 lg:grid-cols-2 pt-2.5 pb-12 border-t border-dashed border-black/20">
             <div class="relative flex items-center gap-6">
                 <div class="w-16 h-16">
-                    <img src="{{ $service->image }}" alt="{{ $service->title }}" class="h-full w-full object-cover" />
+                    <img src="{{ $service->icon }}" alt="{{ $service->title }}" class="h-full w-full object-cover" />
                 </div>
                 <h3 class="font-display font-medium text-4xl text-dark-green uppercase">
                     {{ $service->title }}
@@ -27,7 +27,7 @@
                 </p>
                 <div>
                     <a
-                        href="{{ $url ?? '#' }}"
+                        href="our-services/{{ $service->slug }}"
                         class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-dark-yellow text-light-yellow transition hover:bg-dark-yellow/30"
                         aria-label="Read more"
                     >

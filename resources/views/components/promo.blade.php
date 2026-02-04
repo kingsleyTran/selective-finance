@@ -1,22 +1,24 @@
 <section class="pb-28">
     <div class="container mx-auto px-6">
 
-        {{-- HEADER --}}
-        <div class="text-center max-w-4xl mx-auto mb-14">
-            <p class="subtitle">
-                {{ $subtitle }}
-            </p>
+        @if ($titleTop)
+            {{-- HEADER --}}
+            <div class="text-center max-w-4xl mx-auto mb-14">
+                <p class="subtitle">
+                    {{ $subtitle }}
+                </p>
 
-            <h2 class="text-4xl md:text-[56px] font-display font-medium text-dark-green uppercase">
-                {{ $title }}
-            </h2>
-        </div>
+                <h2 class="text-4xl md:text-[56px] font-display font-medium text-dark-green uppercase">
+                    {{ $title }}
+                </h2>
+            </div>
+        @endif
 
         {{-- CONTENT --}}
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-20 items-start">
 
             {{-- IMAGE --}}
-            <div class="h-full lg:col-span-6 rounded-sm {{ $reverse ? 'lg:order-2' : 'lg:order-1' }}">
+            <div class="h-full lg:col-span-6 rounded-sm {{ $reverse ? 'md:order-2' : 'md:order-1' }}">
                 @if ($image)
                     <img src="{{ $image }}" alt="" class="h-full w-full object-cover rounded-sm" />
                 @endif
@@ -25,9 +27,19 @@
             {{-- TEXT --}}
             <div class="lg:col-span-6 space-y-4">
 
-                <div class="text-davy-grey leading-relaxed max-w-xl">
-                    {!! $description !!}
-                </div>
+                @if ($description)
+                    <div class="text-davy-grey leading-relaxed max-w-xl">
+                        {!! $description !!}
+                    </div>
+                @endif
+
+                @if (!$titleTop)
+                    <div class="max-w-4xl mx-auto mb-14">
+                        <h2 class="text-4xl md:text-5xl font-display font-medium text-dark-green uppercase">
+                            {{ $title }}
+                        </h2>
+                    </div>
+                @endif
 
                 <div class="space-y-4">
                     @foreach ($items as $item)

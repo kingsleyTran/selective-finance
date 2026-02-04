@@ -55,7 +55,7 @@
                 <x-our-service-card
                     :title="$title"
                     :excerpt="$description"
-                    :icon="$service->our_services->image->url" />
+                    :icon="$service->our_services->icon->url" />
             @endforeach
         </div>
 
