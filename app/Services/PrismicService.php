@@ -40,11 +40,11 @@ class PrismicService
     /**
      * Get list pages
      */
-    public function getAll(string $type, int $pageSize = 10)
+    public function getAll(string $type, int $pageSize = 10, int $currentPage = 1)
     {
         return $this->api->query(
             \Prismic\Predicates::at('document.type', $type),
-            ['pageSize' => $pageSize]
+            ['pageSize' => $pageSize, 'page' => $currentPage]
         );
     }
 }

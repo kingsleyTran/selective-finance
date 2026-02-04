@@ -26,7 +26,7 @@
         {{-- CTA --}}
         <div class="mt-6">
             <a
-                href="{{ $url ?? '#' }}"
+                href="/blogs/{{ $slug ?? '#' }}"
                 class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-dark-yellow text-light-yellow transition hover:bg-dark-yellow/30"
                 aria-label="Read more"
             >

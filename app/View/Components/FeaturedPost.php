@@ -6,24 +6,22 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class BlogCard extends Component
+class FeaturedPost extends Component
 {
-    public ?string $image;
-    public ?string $title;
-    public ?string $excerpt;
-    public ?string $content;
-    public ?string $slug;
-    public ?string $createdDate = '';
+    public string $image;
+    public string $title;
+    public string $excerpt;
+    public string $slug;
+    public string $createdDate = '';
 
     /**
      * Create a new component instance.
      */
-    public function __construct(?string $image, ?string $title, ?string $excerpt, ?string $content, ?string $slug, ?string $createdDate)
+    public function __construct(string $image, string $title, string $excerpt, string $slug, string $createdDate)
     {
         $this->image = $image;
         $this->title = $title;
         $this->excerpt = $excerpt;
-        $this->content = $content;
         $this->slug = $slug;
         $this->createdDate = $createdDate;
     }
@@ -33,6 +31,6 @@ class BlogCard extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.blog-card');
+        return view('components.featured-post');
     }
 }

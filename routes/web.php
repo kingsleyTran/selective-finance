@@ -14,7 +14,7 @@ Route::get('/about-us', [PageController::class, 'about'])->name('about');
 Route::get('/our-services', [ServiceController::class, 'index'])->name('services.index');
 Route::get('/our-services/{slug}', [ServiceController::class, 'show'])->name('services.show');
 
-Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
-Route::get('/blog/{slug}', [BlogController::class, 'show'])->name('blog.show');
+Route::get('/blogs', [BlogController::class, 'index'])->name('blog.index');
+Route::get('/blogs/{slug}', [BlogController::class, 'show'])->name('blog.show');
 
 Route::get('/contact-us', [ContactController::class, 'show'])->name('contact');

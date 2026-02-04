@@ -1,10 +1,8 @@
-<section class="relative h-[520px] w-full overflow-hidden">
+<section class="relative h-[597px] w-full overflow-hidden md:mb-28">
     {{-- Background image --}}
-    <img
-        src="{{ $image ?? '/images/about-hero.jpg' }}"
-        alt="Page hero"
-        class="absolute inset-0 min-h-[536px] h-full w-full object-cover"
-    />
+    <div class="absolute inset-0">
+        <img src="{{ $image ?? '/images/about-hero.jpg' }}" alt="Page hero" class="h-full w-full object-cover" />
+    </div>
 
     {{-- Green overlay --}}
     <div class="absolute inset-0 bg-dark-greeb/70"></div>
@@ -24,7 +22,7 @@
             <p class="font-sans text-sm uppercase tracking-widest text-white/70">
                 <a href="/" class="text-light-yellow hover:text-dark-yellow">Homepage</a>
                 <span class="mx-2 text-dark-yellow">/</span>
-                <span class="text-dark-yellow">About Us</span>
+                <span class="text-dark-yellow">{{ $title ?? '' }}</span>
             </p>
         </div>
     </div>

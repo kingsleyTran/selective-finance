@@ -1,5 +1,5 @@
 <section class="pb-24">
-    <div class="mx-auto max-w-7xl px-6">
+    <div class="mx-auto max-w-screen-2xl px-6">
         <div class="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:items-center">
 
             {{-- Left: Image --}}
