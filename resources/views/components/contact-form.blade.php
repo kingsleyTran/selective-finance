@@ -3,7 +3,7 @@
         <div class="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:items-center">
 
             {{-- Left: Image --}}
-            <div class="overflow-hidden rounded-sm">
+            <div class="h-full overflow-hidden rounded-sm">
                 <img
                     src="{{ $image ?? '/images/contact.jpg' }}"
                     alt="Contact"

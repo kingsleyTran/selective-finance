@@ -8,12 +8,17 @@
 @source '../**/*.js';
 
 
+[x-cloak] {
+    display: none !important;
+}
+
 @theme {
     --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     --font-display: "Cormorant Upright", serif;
     --font-aboreto: "Aboreto", cursive;
     --color-light-yellow: #F8F5EA;
     --color-dark-yellow: #B08949;
+    --color-dark-yellow-100: #B59548;
     --color-dark-green: #0A3F24;
     --color-davy-grey: #595959;
     --color-dark: #1C1C1C;

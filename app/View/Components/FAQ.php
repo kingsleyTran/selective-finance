@@ -17,7 +17,12 @@ class FAQ extends Component
     public function __construct(string $title, array $items)
     {
         $this->title = $title;
-        $this->items = $items;
+        foreach($items as $item) {
+            $this->items[] = (object) [
+                'question' => sizeof($item->question) > 0 ? $item->question[0]->text : '',
+                'answer' => sizeof($item->answer) > 0 ? $item->answer[0]->text : '',
+            ];
+        }
     }
 
     /**

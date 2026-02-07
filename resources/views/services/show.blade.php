@@ -131,6 +131,37 @@
                 @endphp
                 <x-f-a-q :title="$title" :items="$slice->items" />
                 @break
+            @case('contact_section')
+                @php
+                    $title = '';
+                    if (isset($slice->primary->title) && is_array($slice->primary->title)) {
+                        $titleParts = [];
+                        foreach ($slice->primary->title as $block) {
+                            if (isset($block->text)) {
+                                $titleParts[] = e($block->text);
+                            }
+                        }
+                        $title = implode('<br>', $titleParts);
+                    } elseif (isset($slice->primary->title)) {
+                        $title = e($slice->primary->title);
+                    }
+                    $description = '';
+                    if (isset($slice->primary->description) && is_array($slice->primary->description)) {
+                        $descriptionParts = [];
+                        foreach ($slice->primary->description as $block) {
+                            if (isset($block->text)) {
+                                $descriptionParts[] = '<p>' . e($block->text) . '</p>';
+                            }
+                        }
+                        $description = implode('', $descriptionParts);
+                    } elseif (isset($slice->primary->description)) {
+                        $description = '<p>' . e($slice->primary->description) . '</p>';
+                    }
+                    $image = $slice->primary->image->url ?? '';
+                @endphp
+                <x-contact-form :title="$title" :image="$image" :description="$description" />
+                @break
         @endswitch
     @endforeach
+    <x-other-services />
 </x-layouts.app>
