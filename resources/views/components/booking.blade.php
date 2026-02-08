@@ -1,9 +1,8 @@
 <section class="relative max-w-screen-2xl mx-auto overflow-hidden mb-[105px] px-6">
-    <div class="h-[597px] w-full">
-        <!-- Background image -->
-        <img src="{{ $image }}" alt="Hero background"
-            class="absolute inset-0 h-full w-full object-cover rounded-sm" />
-
+    <div class="relative h-[597px] w-full rounded-sm bg-cover bg-center bg-no-repeat"
+        @if($image && !str_starts_with($image, 'blob:'))
+            style="background-image: url('{{ $image }}');"
+        @endif>
         <!-- Overlay -->
         <div class="absolute inset-0 bg-black/20 rounded-sm"></div>
 

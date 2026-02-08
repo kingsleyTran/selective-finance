@@ -1,4 +1,4 @@
-<section class="md:py-14">
+<section class="md:mb-28">
     <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-4">
 
         {{-- LEFT CONTENT --}}

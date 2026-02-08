@@ -1,8 +1,8 @@
 @props(['partners' => []])
 
 @if (count($partners) > 0)
-<section class="py-16 md:py-5">
-    <div class="bg-[#fcfcfc] mix-blend-multiply mx-auto max-w-screen-2xl py-10 px-6 mb-5">
+<section class="md:pb-5 md:mb-12 px-6">
+    <div class="bg-[#fcfcfc] mix-blend-multiply mx-auto max-w-screen-2xl px-6 py-10 mb-5">
         <ul class="flex flex-wrap items-center justify-between gap-8 md:gap-12">
             @foreach ($partners as $partner)
                 @php

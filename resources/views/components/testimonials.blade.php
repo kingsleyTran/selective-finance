@@ -1,4 +1,4 @@
-<section class="py-16 md:py-24">
+<section class="md:mb-28">
     <div class="mx-auto max-w-screen-2xl px-6">
         <div class="text-center mb-12 md:mb-16">
             <h2 class="subtitle mb-2">

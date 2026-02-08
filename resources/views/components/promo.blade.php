@@ -1,4 +1,4 @@
-<section class="pb-28">
+<section class="md:mb-28">
     <div class="container mx-auto px-6">
 
         @if ($titleTop)

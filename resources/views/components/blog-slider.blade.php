@@ -1,4 +1,4 @@
-<section class="md:pt-10 md:pb-24">
+<section class="md:mb-28">
     <div class="mx-auto max-w-screen-2xl">
         {{-- Header --}}
         <div class="mb-16 flex items-center justify-between px-6">

@@ -1,5 +1,5 @@
-<section class="text-white pt-12 pb-24">
-    <div class="mx-auto max-w-screen-2xl px-6">
+<section class="text-white md:mb-28">
+    <div class="mx-auto max-w-screen-2xl md:px-6">
 
         {{-- TOP CONTENT --}}
         <p class="text-sm font-bold tracking-widest text-dark-yellow mb-5">
@@ -16,7 +16,7 @@
         </div>
 
         {{-- STACKED IMAGES --}}
-        <div class="lg:col-span-1">
+        <div class="lg:col-span-1 md:-mr-6">
             <div
                 id="about-stacked-slider"
                 class="splide h-full"
