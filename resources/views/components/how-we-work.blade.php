@@ -1,6 +1,6 @@
-<section class="md:mb-32">
+<section class="mb-12 md:mb-28">
     <div class="max-w-screen-2xl mx-auto px-6">
-        <div class="mb-14">
+        <div class="mb-6 md:mb-14">
             <h2 class="font-display text-4xl leading-tight text-dark-green md:text-5xl uppercase">
                 {!! $title !!}
             </h2>
@@ -13,7 +13,7 @@
                    rounded-sm border border-dark-green/20
                    bg-white px-6 py-7.5">
                     <!-- LEFT -->
-                    <div class="flex items-center font-display gap-6">
+                    <div class="flex flex-col md:flex-row md:items-center font-display gap-6">
                         <h2 class="text-4xl font-medium text-dark-green/30 leading-[100%]">
                             {{ $item->index ?? $loop->iteration }}.
                         </h2>

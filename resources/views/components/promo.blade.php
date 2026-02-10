@@ -34,7 +34,7 @@
                 @endif
 
                 @if (!$titleTop)
-                    <div class="max-w-4xl mx-auto mb-14">
+                    <div class="max-w-4xl mx-auto mb-6 md:mb-14">
                         <h2 class="text-4xl md:text-5xl font-display font-medium text-dark-green uppercase">
                             {{ $title }}
                         </h2>

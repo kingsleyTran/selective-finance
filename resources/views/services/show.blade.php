@@ -46,7 +46,7 @@
                         $description = '<p>' . e($slice->primary->description) . '</p>';
                     }
                 @endphp
-                <section class="mb-26">
+                <section class="mb-12 md:mb-28">
                     <div class="max-w-3xl mx-auto text-center">
                         <h2 class="font-display font-medium text-5xl text-dark-green uppercase mb-6">{{ $title }}</h2>
                         <div class="text-davy-grey">{!! $description !!}</div>

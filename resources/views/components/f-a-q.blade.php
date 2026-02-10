@@ -1,8 +1,8 @@
-<section class="mb-30">
-    <div class="mx-auto max-w-5xl">
+<section class="mb-12 md:mb-28">
+    <div class="mx-auto max-w-5xl px-6 md:px-0">
 
         {{-- Title --}}
-        <h2 class="mb-16 text-center font-serif text-4xl md:text-5xl tracking-wide text-dark-green uppercase">
+        <h2 class="mb-8 md:mb-16 text-center font-serif text-4xl md:text-5xl tracking-wide text-dark-green uppercase">
             {{ $title ?? 'FREQUENTLY ASKED QUESTIONS' }}
         </h2>
 
