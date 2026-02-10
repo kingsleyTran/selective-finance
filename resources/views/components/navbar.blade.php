@@ -1,7 +1,11 @@
-<header class="fixed top-0 left-0 right-0 z-50 w-full">
+<header class="fixed top-0 left-0 right-0 z-50 w-full transition-colors duration-300"
+    x-data="{ scrolled: false }"
+    x-init="window.addEventListener('scroll', () => { scrolled = window.scrollY > 80 })"
+    :class="scrolled ? 'bg-dark-green' : ''">
     <div class="mx-auto max-w-screen-2xl px-6">
         <div
-            class="mt-6 flex items-center justify-between px-4 md:px-0">
+            class="my-6 flex items-center justify-between px-4 md:px-0"
+            :class="scrolled ? 'mt-4' : ''">
 
             {{-- Logo --}}
             <a href="/" class="flex items-center">

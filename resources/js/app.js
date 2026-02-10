@@ -22,10 +22,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const testimonialsSlider = document.querySelector('#testimonials-slider');
     if (testimonialsSlider) {
-        new Splide(testimonialsSlider, {
+        const testimonialsSplide = new Splide(testimonialsSlider, {
             type: 'loop',
             gap: '2rem',
-            arrows: true,
+            arrows: false,
             pagination: true,
             autoplay: true,
             interval: 5000,
@@ -34,7 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
             pauseOnHover: true,
             perPage: 1,
             perMove: 1,
-        }).mount();
+        });
+        updateArrows(testimonialsSlider, testimonialsSplide);
     }
 
     const introSlider = document.querySelector('#intro-slider');
@@ -88,24 +89,27 @@ document.addEventListener('DOMContentLoaded', () => {
                 640: { perPage: 1 },
             }
         });
-        const section = otherServicesSlider.closest('section');
-        const prevBtn = section?.querySelector('.splide-prev');
-        const nextBtn = section?.querySelector('.splide-next');
-
-        function updateOtherServicesArrows() {
-            const index = otherServicesSplide.index;
-            const perPage = otherServicesSplide.options?.perPage ?? 1;
-            const end = Math.max(0, otherServicesSplide.length - perPage);
-            if (prevBtn) prevBtn.disabled = index <= 0;
-            if (nextBtn) nextBtn.disabled = index >= end;
-        }
-
-        otherServicesSplide.on('moved resize', updateOtherServicesArrows);
-        otherServicesSplide.mount();
-        updateOtherServicesArrows();
-
-        if (prevBtn) prevBtn.addEventListener('click', () => otherServicesSplide.go('<'));
-        if (nextBtn) nextBtn.addEventListener('click', () => otherServicesSplide.go('>'));
+        updateArrows(otherServicesSlider, otherServicesSplide);
     }
 });
 
+function updateArrows(slider, splide) {
+    const section = slider.closest('section');
+    const prevBtn = section?.querySelector('.splide-prev');
+    const nextBtn = section?.querySelector('.splide-next');
+
+    function updateOtherServicesArrows() {
+        const index = splide.index;
+        const perPage = splide.options?.perPage ?? 1;
+        const end = Math.max(0, splide.length - perPage);
+        if (prevBtn) prevBtn.disabled = index <= 0;
+        if (nextBtn) nextBtn.disabled = index >= end;
+    }
+
+    splide.on('moved resize', updateOtherServicesArrows);
+    splide.mount();
+    updateOtherServicesArrows();
+
+    if (prevBtn) prevBtn.addEventListener('click', () => splide.go('<'));
+    if (nextBtn) nextBtn.addEventListener('click', () => splide.go('>'));
+}
