@@ -10,15 +10,16 @@ class PageHeader extends Component
 {
     public string $image;
     public string $title;
+    public ?string $postTitle = null; 
     // public ?string $breadcrumbs;
     /**
      * Create a new component instance.
      */
-    public function __construct(string $image, string $title)
+    public function __construct(string $image, string $title, ?string $postTitle = null)
     {
         $this->image = $image;
         $this->title = $title;
-        // $this->breadcrumbs = $breadcrumbs;
+        $this->postTitle = $postTitle;
     }
 
     /**

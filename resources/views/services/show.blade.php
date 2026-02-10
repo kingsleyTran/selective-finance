@@ -17,7 +17,7 @@
                         $title = e($slice->primary->title);
                     }
                 @endphp
-                <x-page-header :image="$image" :title="$title" />
+                <x-page-header :image="$image" :title="'Our Services'" :postTitle="$title" />
                 @break
             @case('intro_section')
                 @php
