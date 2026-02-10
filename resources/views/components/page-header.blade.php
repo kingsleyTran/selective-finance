@@ -1,4 +1,4 @@
-<section class="relative h-[597px] w-full overflow-hidden mb-16 md:mb-28">
+<section class="relative h-[597px] w-full overflow-hidden mb-12 md:mb-28">
     {{-- Background image --}}
     <div class="absolute inset-0">
         <img src="{{ $image ?? '/images/about-hero.jpg' }}" alt="Page hero" class="h-full w-full object-cover" />

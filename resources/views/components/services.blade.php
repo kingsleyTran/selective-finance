@@ -1,8 +1,8 @@
-<section class="">
+<section class="mb-12 md:28">
     <div class="mx-auto max-w-screen-2xl px-6">
 
         {{-- Header --}}
-        <div class="mb-20 grid grid-cols-1 lg:grid-cols-2">
+        <div class="mb-8 md:mb-20 grid grid-cols-1 lg:grid-cols-2">
             <p class="subtitle">
                 {{ $subtitle }}
             </p>
@@ -12,7 +12,7 @@
             </h2>
         </div>
         @foreach ($services as $service)
-        <div class="grid grid-cols-1 gap-16 lg:grid-cols-2 pt-2.5 pb-12 border-t border-dashed border-black/20">
+        <div class="grid grid-cols-1 gap-4 md:gap-16 lg:grid-cols-2 pt-2.5 pb-6 md:pb-12 border-t border-dashed border-black/20">
             <div class="relative flex items-center gap-6">
                 <div class="w-16 h-16">
                     <img src="{{ $service->icon }}" alt="{{ $service->title }}" class="h-full w-full object-cover" />
@@ -25,7 +25,7 @@
                 <p class="text-dark">
                     {{ $service->description }}
                 </p>
-                <div>
+                <div class="ml-3">
                     <a
                         href="our-services/{{ $service->slug }}"
                         class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-dark-yellow text-light-yellow transition hover:bg-dark-yellow/30"

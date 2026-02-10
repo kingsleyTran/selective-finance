@@ -12,7 +12,7 @@
                                 $titleParts[] = e($block->text);
                             }
                         }
-                        $title = implode('<br>', $titleParts);
+                        $title = implode('<span class="md:hidden"> </span><br class="hidden md:inline">', $titleParts);
                     } elseif (isset($slice->primary->title)) {
                         $title = e($slice->primary->title);
                     }
@@ -29,7 +29,7 @@
                                 $titleParts[] = e($block->text);
                             }
                         }
-                        $title = implode('<br>', $titleParts);
+                        $title = implode('<span class="md:hidden"> </span><br class="hidden md:inline">', $titleParts);
                     } elseif (isset($slice->primary->title)) {
                         $title = e($slice->primary->title);
                     }
@@ -48,7 +48,7 @@
                                 $titleParts[] = e($block->text);
                             }
                         }
-                        $title = implode('<br>', $titleParts);
+                        $title = implode('<span class="md:hidden"> </span><br class="hidden md:inline">', $titleParts);
                     } elseif (isset($slice->primary->title)) {
                         $title = e($slice->primary->title);
                     }
@@ -77,7 +77,7 @@
                                 $titleParts[] = e($block->text);
                             }
                         }
-                        $title = implode('<br>', $titleParts);
+                        $title = implode('<span class="md:hidden"> </span><br class="hidden md:inline">', $titleParts);
                     } elseif (isset($slice->primary->title)) {
                         $title = e($slice->primary->title);
                     }

@@ -1,5 +1,5 @@
-<section class="md:mb-28">
-    <div class="grid max-w-screen-2xl mx-auto grid-cols-1 lg:grid-cols-2 gap-16 px-6">
+<section class="mb-12 md:mb-28">
+    <div class="grid max-w-screen-2xl mx-auto grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 px-6">
 
         {{-- LEFT CONTENT --}}
         <div class="relative flex flex-col justify-between items-start">

@@ -1,4 +1,4 @@
-<section class="pt-10 pb-24">
+<section class="mb-12 md:mb-28">
     <div class="mx-auto max-w-screen-2xl px-6">
 
         {{-- Header --}}
