@@ -1,6 +1,6 @@
-<section class="pb-24">
+<section class="mb-12 md:mb-28">
     <div class="mx-auto max-w-screen-2xl px-6">
-        <div class="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:items-center">
+        <div class="grid grid-cols-1 gap-8 md:gap-16 lg:grid-cols-2 lg:items-center">
 
             {{-- Left: Image --}}
             <div class="h-full overflow-hidden rounded-sm">

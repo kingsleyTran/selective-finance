@@ -1,9 +1,9 @@
-<section class="md:mb-28">
+<section class="mb-12 md:mb-28">
     <div class="container mx-auto px-6">
 
         @if ($titleTop)
             {{-- HEADER --}}
-            <div class="text-center max-w-4xl mx-auto mb-14">
+            <div class="text-center max-w-4xl mx-auto mb-6 md:mb-14">
                 <p class="subtitle">
                     {{ $subtitle }}
                 </p>
@@ -15,7 +15,7 @@
         @endif
 
         {{-- CONTENT --}}
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-20 items-start">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-20 items-start">
 
             {{-- IMAGE --}}
             <div class="h-full lg:col-span-6 rounded-sm {{ $reverse ? 'md:order-2' : 'md:order-1' }}">

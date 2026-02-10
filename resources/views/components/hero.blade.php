@@ -24,11 +24,11 @@
             <p class="mt-6 max-w-xl text-base text-white md:text-lg mb-10">
                 {{ $subtitle }}
             </p>
-            <div class="flex gap-2">
-                <a href="#" class="rounded-full bg-white px-10 py-3 text-black transition hover:bg-gray-200">
+            <div class="flex flex-col md:flex-row gap-2">
+                <a href="#" class="rounded-full bg-white px-10 py-3 text-black text-center transition hover:bg-gray-200">
                     Book a Consultation
                 </a>
-                <a href="{{ route('services.index') }}" class="rounded-full bg-transparent border border-white px-10 py-3 text-white transition hover:bg-white hover:text-black">
+                <a href="{{ route('services.index') }}" class="rounded-full bg-transparent border border-white px-10 py-3 text-white text-center transition hover:bg-white hover:text-black">
                     Explore Our Services
                 </a>
             </div>

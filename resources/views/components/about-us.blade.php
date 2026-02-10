@@ -1,11 +1,11 @@
-<section class="text-white md:mb-28">
-    <div class="mx-auto max-w-screen-2xl md:px-6">
+<section class="text-white mb-12 md:mb-28">
+    <div class="mx-auto max-w-screen-2xl px-6">
 
         {{-- TOP CONTENT --}}
         <p class="text-sm font-bold tracking-widest text-dark-yellow mb-5">
             ABOUT US
         </p>
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-14">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-16 mb-14">
             <div>
                 <h2 class="text-5xl lg:text-[56px] font-display text-dark-green uppercase">{{ $title }}</h2>
             </div>
