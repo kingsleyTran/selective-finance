@@ -15,26 +15,28 @@
         </div>
 
         {{-- Slider --}}
-        <div id="blog-slider" class="splide px-6 md:px-0 md:pl-6">
-            <div class="splide__track">
-                <ul class="splide__list">
-                    @foreach($blogs as $blog)
-                        <li class="splide__slide md:pr-6">
-                            <x-blog-card
-                                :image="$blog->data->image->url"
-                                :date="$blog->data->created_date"
-                                :title="$blog->data->title[0]->text"
-                            />
-                        </li>
-                    @endforeach
-                </ul>
-                <a
-                    href="/blog"
-                    class="font-sans bg-dark-yellow py-3 px-10 tracking-widest text-[#F8F5EA] text-center rounded-full transition block md:hidden hover:bg-dark-yellow/30"
-                >
-                    Visit the Blog
-                </a>
+        <div class="flex flex-col gap-6 md:gap-0">
+            <div id="blog-slider" class="splide px-6 md:px-0 md:pl-6">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        @foreach($blogs as $blog)
+                            <li class="splide__slide">
+                                <x-blog-card
+                                    :image="$blog->data->image->url"
+                                    :date="$blog->data->created_date"
+                                    :title="$blog->data->title[0]->text"
+                                />
+                            </li>
+                        @endforeach
+                    </ul>
+                </div>
             </div>
+            <a
+                href="/blog"
+                class="font-sans bg-dark-yellow py-3 px-10 tracking-widest text-[#F8F5EA] text-center rounded-full transition block md:hidden hover:bg-dark-yellow/30 mx-6 md:mx-0"
+            >
+                Visit the Blog
+            </a>
         </div>
     </div>
 </section>

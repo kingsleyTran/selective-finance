@@ -17,4 +17,14 @@ class BlogController extends Controller
             'currentPage' => 1,
         ]);
     }
+
+    public function show(PrismicService $prismic, string $slug)
+    {
+        $page = $prismic->getByUID('blogs', $slug);
+        abort_if(!$page, 404);
+
+        return view('blog.show', [
+            'page' => $page,
+        ]);
+    }
 }

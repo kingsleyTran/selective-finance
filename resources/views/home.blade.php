@@ -245,7 +245,9 @@
                     }
                     $image = $slice->primary->image->url ?? '';
                 @endphp
-                <x-contact-form :title="$title" :image="$image" :description="$description" />
+                <div id="let-connect">
+                    <x-contact-form :title="$title" :image="$image" :description="$description" />
+                </div>
                 @break
         @endswitch
     @endforeach

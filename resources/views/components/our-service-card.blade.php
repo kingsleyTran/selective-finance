@@ -1,4 +1,4 @@
-<a href="{{ $link }}"
+<a href="{{ $link ?? route('services.show', $uid) }}"
     class="bg-white flex flex-col justify-between items-start p-8 rounded-sm border border-dark-green/20 hover:border-dark-green transition group min-h-[425px]">
 
     @if ($icon)

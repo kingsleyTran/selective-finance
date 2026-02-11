@@ -17,7 +17,7 @@ class BlogSlider extends Component
     public function __construct(PrismicService $prismic, string $title)
     {
         $this->title = $title;
-        $blogs = $prismic->getAll('blogs');
+        $blogs = $prismic->getAll('blogs', 5);
         $this->blogs = $blogs->results;
     }
 
