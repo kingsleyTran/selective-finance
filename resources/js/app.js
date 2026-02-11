@@ -1,6 +1,11 @@
 import './bootstrap';
+import Alpine from 'alpinejs'
 import '@splidejs/splide/css';
 import Splide from '@splidejs/splide';
+
+window.Alpine = Alpine
+ 
+Alpine.start()
 
 document.addEventListener('DOMContentLoaded', () => {
     const aboutSlider = document.querySelector('#about-stacked-slider');
