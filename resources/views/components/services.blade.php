@@ -7,7 +7,7 @@
                 {{ $subtitle }}
             </p>
 
-            <h2 class="font-display text-4xl leading-tight text-dark-green md:text-5xl uppercase">
+            <h2 class="font-display font-medium text-4xl leading-tight text-dark-green md:text-5xl uppercase">
                 {!! $title !!}
             </h2>
         </div>
@@ -21,7 +21,7 @@
                     {{ $service->title }}
                 </h3>
             </div>
-            <div class="relative flex justify-between">
+            <div class="relative flex justify-between items-center">
                 <p class="text-dark">
                     {{ $service->description }}
                 </p>

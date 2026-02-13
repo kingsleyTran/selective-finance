@@ -7,7 +7,7 @@
         </p>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-16 mb-14">
             <div>
-                <h2 class="text-5xl lg:text-[56px] font-display text-dark-green uppercase">{{ $title }}</h2>
+                <h2 class="text-5xl lg:text-[56px] font-display font-medium text-dark-green uppercase">{{ $title }}</h2>
             </div>
 
             <div class="text-davy-grey space-y-6 prose prose-invert max-w-none">

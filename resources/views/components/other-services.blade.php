@@ -3,7 +3,7 @@
 
         {{-- Header --}}
         <div class="mb-12 flex items-center justify-between">
-            <h2 class="font-display text-4xl md:text-[56px] leading-[130%] tracking-[-0.56px] text-dark-green uppercase">
+            <h2 class="font-display font-medium text-4xl md:text-[56px] leading-[130%] tracking-[-0.56px] text-dark-green uppercase">
                 {{ $title ?? 'OTHER SERVICES' }}
             </h2>
 

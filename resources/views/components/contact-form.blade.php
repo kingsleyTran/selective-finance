@@ -14,7 +14,7 @@
             {{-- Right: Form --}}
             <div>
                 {{-- Heading --}}
-                <h2 class="font-display text-4xl md:text-[56px] leading-[130%] tracking-[-0.56px] text-dark-green uppercase">
+                <h2 class="font-display font-medium text-4xl md:text-[56px] leading-[130%] tracking-[-0.56px] text-dark-green uppercase">
                     {!! $title !!}
                 </h2>
 

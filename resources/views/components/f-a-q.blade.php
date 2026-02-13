@@ -15,7 +15,7 @@
                         class="flex w-full items-start justify-between gap-6 text-left">
 
                         <div class="max-w-3xl">
-                            <h3 class="font-display text-[28px] -tracking-[0.32px] leading-[100%] transition-colors uppercase"
+                            <h3 class="font-display font-medium text-[28px] -tracking-[0.32px] leading-[100%] transition-colors uppercase"
                                 :class="open === {{ $index }} ? 'text-dark-yellow' : 'text-dark-green'">
                                 {{ $item->question }}
                             </h3>

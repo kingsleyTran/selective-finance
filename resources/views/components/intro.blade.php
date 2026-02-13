@@ -4,12 +4,12 @@
         {{-- Top content --}}
         <div class="flex flex-col md:flex-row md:justify-between mx-auto max-w-screen-2xl px-6">
             {{-- Headline --}}
-            <h2 class="font-display text-4xl md:text-5xl leading-tight text-dark-green uppercase">
+            <h2 class="font-display font-medium text-4xl md:text-5xl text-dark-green uppercase">
                 {!! $title !!}
             </h2>
 
             {{-- Description --}}
-            <div class="max-w-xl font-sans text-lg leading-relaxed text-davy-grey">
+            <div class="max-w-xl font-sans leading-relaxed text-davy-grey">
                 {!! $description !!}
             </div>
         </div>

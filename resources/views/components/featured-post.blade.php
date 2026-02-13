@@ -12,7 +12,7 @@
                     {{ $createdDate }}
                 </span>
 
-                <h2 class="font-display text-4xl leading-tight text-dark-green md:text-5xl">
+                <h2 class="font-display font-medium text-4xl text-dark-green md:text-5xl uppercase">
                     {{ $title }}
                 </h2>
 

@@ -25,7 +25,7 @@
             </div>
 
             {{-- TEXT --}}
-            <div class="lg:col-span-6 space-y-4">
+            <div class="lg:col-span-6 space-y-4 {{ $reverse ? 'md:order-1' : 'md:order-2' }}">
 
                 @if ($description)
                     <div class="text-davy-grey leading-relaxed max-w-xl">
