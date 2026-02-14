@@ -5,6 +5,50 @@ import Splide from '@splidejs/splide';
 
 window.Alpine = Alpine
 
+Alpine.data('contactForm', () => ({
+    loading: false,
+    success: false,
+    successMessage: '',
+    error: false,
+    errorHtml: '',
+    submit(event) {
+        this.loading = true;
+        this.success = false;
+        this.error = false;
+        const form = event.target;
+        const formData = new FormData(form);
+        fetch(form.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'X-Requested-With': 'XMLHttpRequest',
+                'Accept': 'application/json',
+            },
+        })
+        .then(res => res.json().then(data => ({ ok: res.ok, status: res.status, data })))
+        .then(({ ok, status, data }) => {
+            if (ok) {
+                this.success = true;
+                this.successMessage = data.message;
+                form.reset();
+            } else if (status === 422 && data.errors) {
+                this.error = true;
+                this.errorHtml = Object.values(data.errors).flat().map(e => `<li>${e}</li>`).join('');
+            } else {
+                this.error = true;
+                this.errorHtml = `<li>${data.message || 'Something went wrong. Please try again.'}</li>`;
+            }
+        })
+        .catch(() => {
+            this.error = true;
+            this.errorHtml = '<li>Something went wrong. Please try again.</li>';
+        })
+        .finally(() => {
+            this.loading = false;
+        });
+    }
+}));
+
 Alpine.start()
 
 document.addEventListener('DOMContentLoaded', () => {

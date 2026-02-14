@@ -18,3 +18,4 @@ Route::get('/blogs', [BlogController::class, 'index'])->name('blog.index');
 Route::get('/blogs/{slug}', [BlogController::class, 'show'])->name('blog.show');
 
 Route::get('/contact-us', [ContactController::class, 'show'])->name('contact');
+Route::post('/contact-us', [ContactController::class, 'store'])->name('contact.submit');
