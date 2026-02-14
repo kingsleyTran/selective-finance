@@ -22,9 +22,14 @@ class OurCoreServices extends Component
         $this->subtitle = $subtitle;
         foreach ($services as $service) {
             $item = $prismic->getByID($service->our_services->id);
-            $primary = $item->data->body[0]->primary ?? null;
-            if ($primary) {
-                $this->services[] = (object) ['our_services' => $primary];
+            $data = $item->data->body[0]->primary ?? null;
+            if ($data) {
+                $this->services[] = (object) [
+                    'uid' => $item->uid,
+                    'title' => $data->title[0] ? $data->title[0]->text : '',
+                    'icon' => $data->icon->url ?? '',
+                    'description' => $data->description[0] ? $data->description[0]->text : '',
+                ];
             }
         }
     }

@@ -4,7 +4,7 @@ import '@splidejs/splide/css';
 import Splide from '@splidejs/splide';
 
 window.Alpine = Alpine
- 
+
 Alpine.start()
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -46,36 +46,36 @@ document.addEventListener('DOMContentLoaded', () => {
     const introSlider = document.querySelector('#intro-slider');
     if (introSlider) {
         new Splide(introSlider, {
-            type      : 'slide',
+            type: 'loop',
+            height: 460,
             autoWidth: true,
             gap: '1.5rem',
-            perPage   : 2.5,
-            autoplay  : true,
-            arrows    : false,
+            arrows: false,
             pagination: false,
-            interval  : 4000,
-            speed     : 600,
-            easing    : 'ease',
-            pauseOnHover: true,
-            breakpoints: {
-                1024: { perPage: 2.5 },
-                768: { perPage: 2 },
-                640: { perPage: 1 },
-            },
+            autoplay: true,
+            interval: 3500,
+            speed: 800,
+            easing: 'ease-in-out',
+            pauseOnHover: false,
         }).mount();
     }
 
     const blogSlider = document.querySelector('#blog-slider');
     if (blogSlider) {
         new Splide(blogSlider, {
-            type      : 'slide',
+            type      : 'loop',
             perPage   : 2.5,
+            perMove   : 1,
+            gap: '1.5rem',
             autoplay  : true,
             arrows    : false,
             pagination: false,
+            interval  : 4000,
+            speed     : 600,
+            easing    : 'ease',
             breakpoints: {
-                1024: { perPage: 2 },
-                    640:  { perPage: 1 },
+                1024: { perPage: 2.5 },
+                640:  { perPage: 1 },
                 },
             }).mount();
     }

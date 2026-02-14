@@ -1,4 +1,4 @@
-<section class="mb-12 md:mb-28">
+<section class="mb-12 md:mb-28 scroll-mt-24">
     <div class="mx-auto max-w-screen-2xl px-6">
         <div class="grid grid-cols-1 gap-8 md:gap-16 lg:grid-cols-2 lg:items-center">
 
@@ -36,7 +36,7 @@
                     {{-- Select --}}
                     <select
                         name="service"
-                        class="w-full rounded-md border border-white/10 bg-white px-5 py-4 font-sans text-black focus:outline-none"
+                        class="w-full appearance-none rounded-md border border-white/10 bg-white bg-[length:1.25rem_1.25rem] bg-[right_1rem_center] bg-no-repeat px-5 py-4 pr-12 font-sans text-black focus:outline-none [background-image:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%20stroke%3D%22%23595959%22%3E%3Cpath%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22M19%209l-7%207-7-7%22%2F%3E%3C%2Fsvg%3E')]"
                     >
                         <option>Business Loan</option>
                         <option>Invoice Finance</option>

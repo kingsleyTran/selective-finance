@@ -12,16 +12,18 @@ class OurServiceCard extends Component
     public string $excerpt;
     public string $icon;
     public ?string $link;
+    public ?string $uid;
 
     /**
      * Create a new component instance.
      */
-    public function __construct(string $title, string $excerpt, string $icon, ?string $link)
+    public function __construct(string $title, string $excerpt, string $icon, ?string $link, ?string $uid)
     {
         $this->title = $title;
         $this->excerpt = $excerpt;
         $this->icon = $icon;
         $this->link = $link ?? null;
+        $this->uid = $uid ?? null;
     }
 
     /**

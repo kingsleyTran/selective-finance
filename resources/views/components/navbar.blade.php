@@ -19,6 +19,7 @@
                     class="flex items-center gap-8 border border-white/20 rounded-full bg-white/10 px-10 py-3">
                     <x-nav-link href="/our-services">Our Services</x-nav-link>
                     <x-nav-link href="/about-us">About Us</x-nav-link>
+                    <x-nav-link href="https://www.selectivefinance.com.au/calculators/">Calculators</x-nav-link>
                     <x-nav-link href="/blogs">Blog</x-nav-link>
                 </nav>
                 <a href="/contact" class="rounded-full bg-white px-8 py-3 font-medium text-black transition hover:bg-gray-200">

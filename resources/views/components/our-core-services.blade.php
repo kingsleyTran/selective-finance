@@ -26,36 +26,11 @@
         {{-- RIGHT GRID --}}
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             @foreach ($services as $service)
-                @php
-                    $title = '';
-                    if (isset($service->our_services->title) && is_array($service->our_services->title)) {
-                        $titleParts = [];
-                        foreach ($service->our_services->title as $block) {
-                            if (isset($block->text)) {
-                                $titleParts[] = e($block->text);
-                            }
-                        }
-                        $title = implode('<br>', $titleParts);
-                    } elseif (isset($service->our_services->title)) {
-                        $title = e($service->our_services->title);
-                    }
-                    $description = '';
-                    if (isset($service->our_services->description) && is_array($service->our_services->description)) {
-                        $descriptionParts = [];
-                        foreach ($service->our_services->description as $block) {
-                            if (isset($block->text)) {
-                                $descriptionParts[] = '<p>' . e($block->text) . '</p>';
-                            }
-                        }
-                        $description = implode('', $descriptionParts);
-                    } elseif (isset($service->our_services->description)) {
-                        $description = e($service->our_services->description[0]->text);
-                    }
-                @endphp
                 <x-our-service-card
-                    :title="$title"
-                    :excerpt="$description"
-                    :icon="$service->our_services->icon->url" />
+                    :title="$service->title"
+                    :excerpt="$service->description"
+                    :icon="$service->icon"
+                    :uid="$service->uid" />
             @endforeach
         </div>
 

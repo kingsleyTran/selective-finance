@@ -10,7 +10,7 @@
     {{-- Content --}}
     <div class="relative z-10 flex h-full items-end">
         <div class="mx-auto w-full max-w-screen-2xl px-6 pb-16">
-            <h1 class="font-display text-[56px] text-white uppercase">
+            <h1 class="font-display font-medium text-[56px] text-white uppercase">
                 {{ $postTitle ?? $title ?? 'About Us' }}
             </h1>
         </div>

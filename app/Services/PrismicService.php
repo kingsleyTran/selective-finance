@@ -19,9 +19,9 @@ class PrismicService
     /**
      * Get single page by Custom Type
      */
-    public function getSingle(string $type)
+    public function getSingle(string $type, array $options = [])
     {
-        return $this->api->getSingle($type);
+        return $this->api->getSingle($type, $options);
     }
 
     /**

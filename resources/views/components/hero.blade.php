@@ -25,7 +25,7 @@
                 {{ $subtitle }}
             </p>
             <div class="flex flex-col md:flex-row gap-2">
-                <a href="#" class="rounded-full bg-white px-10 py-3 text-black text-center transition hover:bg-gray-200">
+                <a href="#let-connect" class="rounded-full bg-white px-10 py-3 text-black text-center transition hover:bg-gray-200">
                     Book a Consultation
                 </a>
                 <a href="{{ route('services.index') }}" class="rounded-full bg-transparent border border-white px-10 py-3 text-white text-center transition hover:bg-white hover:text-black">
