@@ -1,4 +1,4 @@
-<section class="mb-12 md:mb-28 scroll-mt-24">
+<section class="mb-14 md:mb-28 scroll-mt-24">
     <div class="mx-auto max-w-screen-2xl px-6">
         <div class="grid grid-cols-1 gap-8 md:gap-16 lg:grid-cols-2 lg:items-center">
 
@@ -14,7 +14,7 @@
             {{-- Right: Form --}}
             <div>
                 {{-- Heading --}}
-                <h2 class="font-display font-medium text-4xl md:text-[56px] leading-[130%] tracking-[-0.56px] text-dark-green uppercase">
+                <h2 class="font-display font-medium text-3xl md:text-4xl lg:text-[56px] leading-[130%] tracking-[-0.56px] text-dark-green uppercase">
                     {!! $title !!}
                 </h2>
 

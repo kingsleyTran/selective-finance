@@ -38,3 +38,10 @@ h1, h2, h3 {
 .subtitle {
     @apply font-bold text-dark-yellow uppercase tracking-[3.36px] text-sm mb-3;
 }
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

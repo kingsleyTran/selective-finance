@@ -16,7 +16,7 @@
             @endisset
 
             {{-- Title --}}
-            <h1 class="font-display text-4xl font-medium md:text-[56px] uppercase">
+            <h1 class="font-display text-3xl md:text-4xl font-medium lg:text-[56px] uppercase">
                 {!! $title !!}
             </h1>
 

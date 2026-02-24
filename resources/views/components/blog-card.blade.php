@@ -12,16 +12,18 @@
     </div>
 
     {{-- Content --}}
-    <div class="relative pb-8">
-        {{-- Date --}}
-        <p class="mb-6 font-sans text-davy-grey">
-            {{ $createdDate ?? '5th January 2025' }}
-        </p>
+    <div class="relative flex flex-col justify-between">
+        <div>
+            {{-- Date --}}
+            <p class="mb-6 font-sans text-davy-grey">
+                {{ $createdDate ?? '5th January 2025' }}
+            </p>
 
-        {{-- Title --}}
-        <h3 class="font-display font-medium text-[32px] leading-[130%] tracking-[-0.32px] text-dark-green uppercase">
-            {{ $title ?? 'Unlocking Equity: How to Grow Your Investment Portfolio' }}
-        </h3>
+            {{-- Title --}}
+            <h3 class="font-display font-medium text-2xl md:text-[32px] leading-[130%] tracking-[-0.32px] text-dark-green uppercase line-clamp-3">
+                {{ $title ?? 'Unlocking Equity: How to Grow Your Investment Portfolio' }}
+            </h3>
+        </div>
 
         {{-- CTA --}}
         <div class="mt-6">

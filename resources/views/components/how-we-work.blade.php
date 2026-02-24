@@ -1,7 +1,7 @@
-<section class="mb-12 md:mb-28">
+<section class="mb-14 md:mb-28">
     <div class="max-w-screen-2xl mx-auto px-6">
         <div class="mb-6 md:mb-14">
-            <h2 class="font-display font-medium text-4xl leading-tight text-dark-green md:text-5xl uppercase">
+            <h2 class="font-display font-medium text-3xl md:text-4xl leading-tight text-dark-green md:text-5xl uppercase">
                 {!! $title !!}
             </h2>
         </div>
@@ -14,17 +14,17 @@
                    bg-white px-6 py-7.5">
                     <!-- LEFT -->
                     <div class="flex flex-col md:flex-row md:items-center font-display gap-6">
-                        <h2 class="text-4xl font-medium text-dark-green/30 leading-[100%]">
+                        <h2 class="text-3xl md:text-4xl font-medium text-dark-green/30 leading-[100%]">
                             {{ $item->index ?? $loop->iteration }}.
                         </h2>
 
-                        <h3 class="text-[32px] font-medium text-dark-green -tracking-[0.32px] uppercase leading-[100%]">
+                        <h3 class="text-2xl md:text-[32px] font-medium text-dark-green -tracking-[0.32px] uppercase leading-[100%]">
                             {!! $item->title !!}
                         </h3>
                     </div>
 
                     <!-- RIGHT -->
-                    <div class="text-dark text-lg leading-[130%]">
+                    <div class="text-dark md:text-lg leading-[130%]">
                         {!! $item->description !!}
                     </div>
                 </div>

@@ -1,4 +1,4 @@
-<section class="mb-24">
+<section class="mb-14 md:mb-28">
     <div class="mx-auto max-w-screen-2xl px-6">
         <article class="grid grid-cols-1 overflow-hidden rounded-sm border border-dark-green/20 bg-white md:grid-cols-2 gap-8 p-8">
             <!-- IMAGE -->
@@ -12,7 +12,7 @@
                     {{ $createdDate }}
                 </span>
 
-                <h2 class="font-display font-medium text-4xl text-dark-green md:text-5xl uppercase">
+                <h2 class="font-display font-medium text-3xl md:text-4xl text-dark-green lg:text-5xl uppercase">
                     {{ $title }}
                 </h2>
 

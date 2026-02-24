@@ -1,8 +1,8 @@
-<section class="mb-12 md:mb-28">
+<section class="mb-14 md:mb-28">
     <div class="mx-auto max-w-5xl px-6 md:px-0">
 
         {{-- Title --}}
-        <h2 class="mb-8 md:mb-16 text-center font-serif text-4xl md:text-5xl tracking-wide text-dark-green uppercase">
+        <h2 class="mb-8 md:mb-16 text-left md:text-center font-serif text-3xl md:text-4xl lg:text-5xl tracking-wide text-dark-green uppercase">
             {{ $title ?? 'FREQUENTLY ASKED QUESTIONS' }}
         </h2>
 
@@ -15,7 +15,7 @@
                         class="flex w-full items-start justify-between gap-6 text-left">
 
                         <div class="max-w-3xl">
-                            <h3 class="font-display font-medium text-[28px] -tracking-[0.32px] leading-[100%] transition-colors uppercase"
+                            <h3 class="font-display font-medium text-2xl md:text-[28px] -tracking-[0.32px] leading-[100%] transition-colors uppercase"
                                 :class="open === {{ $index }} ? 'text-dark-yellow' : 'text-dark-green'">
                                 {{ $item->question }}
                             </h3>

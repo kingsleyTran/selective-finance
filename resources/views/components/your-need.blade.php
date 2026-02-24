@@ -1,10 +1,10 @@
-<section class="py-28">
+<section class="mb-14 md:mb-28">
     <div class="mx-auto max-w-screen-2xl px-6">
-        <div class="grid grid-cols-1 gap-20 lg:grid-cols-2">
+        <div class="grid grid-cols-1 gap-10 md:gap-20 lg:grid-cols-2">
 
             {{-- LEFT (sticky, follows scroll) --}}
             <div class="lg:sticky lg:top-24 lg:self-start">
-                <h2 class="font-display font-medium text-5xl leading-tight text-dark-green uppercase">
+                <h2 class="font-display font-medium text-3xl md:text-4xl lg:text-5xl leading-tight text-dark-green uppercase">
                     {!! $title !!}
                 </h2>
 
@@ -24,7 +24,7 @@
             </div>
 
             {{-- RIGHT --}}
-            <div class="space-y-14">
+            <div class="space-y-6 md:space-y-14">
                 @foreach ($items as $index => $item)
                     @php
                         $stepLabel = null;
@@ -49,17 +49,17 @@
                             $stepDescription = $item['description'] ?? $item['text'] ?? '';
                         }
                     @endphp
-                    <div class="border-b border-dashed border-black/20 pb-8">
+                    <div class="border-b border-dashed border-black/20 pb-4 md:pb-8">
                         <div>
-                            <span class="font-display font-medium text-[32px] leading-[100%] -tracking-[0.32px] text-dark-yellow uppercase">
+                            <span class="font-display font-medium text-2xl md:text-[32px] leading-[100%] -tracking-[0.32px] text-dark-yellow uppercase">
                                 {{ is_string($stepLabel) ? $stepLabel : e($stepLabel->text ?? '') }}
                             </span>
-                            <span class="font-display font-light text-[50px] leading-[100%] -tracking-[0.32px] text-dark-yellow uppercase">
+                            <span class="font-display font-light text-4xl md:text-[50px] leading-[100%] -tracking-[0.32px] text-dark-yellow uppercase">
                                 {{ str_pad($index + 1, 2, '0', STR_PAD_LEFT) }}
                             </span>
                         </div>
 
-                        <h3 class="mt-2 font-display font-medium text-[32px] text-dark-green uppercase">
+                        <h3 class="mt-2 font-display font-medium text-2xl md:text-[32px] text-dark-green uppercase">
                             {!! is_string($stepTitle) ? e($stepTitle) : (is_object($stepTitle) && isset($stepTitle->text) ? e($stepTitle->text) : '') !!}
                         </h3>
 

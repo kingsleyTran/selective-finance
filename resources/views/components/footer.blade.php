@@ -2,7 +2,7 @@
     <div class="mx-auto max-w-screen-2xl px-6 py-16">
         <div class="mb-8">
             <a href="{{ url('/') }}" class="inline-block">
-                <img src="{{ asset('images/logo.svg') }}" alt="Selective Finance" class="h-full w-auto" />
+                <img src="{{ asset('images/logo.svg') }}" alt="Selective Finance" class="h-20 md:h-full w-auto" />
             </a>
         </div>
         {{-- Top border --}}
@@ -14,16 +14,16 @@
                     CONTACT
                 </p>
 
-                <p class="font-medium max-w-xs leading-relaxed text-xl text-light-yellow/60">
+                <p class="font-medium max-w-xs leading-relaxed md:text-xl text-light-yellow/60">
                     4517 Washington Ave.<br>
                     Manchester, Kentucky 39495
                 </p>
 
-                <p class="font-medium mt-4 text-xl text-light-yellow/60">
+                <p class="font-medium mt-4 md:text-xl text-light-yellow/60">
                     (225) 555-0118
                 </p>
 
-                <p class="font-medium mt-2 text-xl text-light-yellow/60">
+                <p class="font-medium mt-2 md:text-xl text-light-yellow/60">
                     info@selectivefinance.com.au
                 </p>
             </div>
@@ -34,7 +34,7 @@
                     NAVIGATION
                 </p>
 
-                <ul class="space-y-4 font-medium text-[32px] leading-[130%] tracking-[-0.32px]">
+                <ul class="space-y-4 font-medium text-2xl md:text-[32px] leading-[130%] tracking-[-0.32px]">
                     <li>
                         <a href="#" class="transition text-light-yellow hover:text-dark-yellow">
                             Our Services

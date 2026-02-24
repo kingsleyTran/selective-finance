@@ -1,4 +1,4 @@
-<section class="mb-12 md:mb-28">
+<section class="mb-14 md:mb-28">
     <div class="container mx-auto px-6">
 
         @if ($titleTop)
@@ -8,7 +8,7 @@
                     {{ $subtitle }}
                 </p>
 
-                <h2 class="text-4xl md:text-[56px] font-display font-medium text-dark-green uppercase">
+                <h2 class="text-3xl md:text-4xl lg:text-[56px] font-display font-medium text-dark-green uppercase">
                     {{ $title }}
                 </h2>
             </div>
@@ -18,7 +18,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-20 items-start">
 
             {{-- IMAGE --}}
-            <div class="h-full lg:col-span-6 rounded-sm {{ $reverse ? 'md:order-2' : 'md:order-1' }}">
+            <div class="h-[260px] md:h-full lg:col-span-6 rounded-sm {{ $reverse ? 'md:order-2' : 'md:order-1' }}">
                 @if ($image)
                     <img src="{{ $image }}" alt="" class="h-full w-full object-cover rounded-sm" />
                 @endif
@@ -35,7 +35,7 @@
 
                 @if (!$titleTop)
                     <div class="max-w-4xl mx-auto mb-6 md:mb-14">
-                        <h2 class="text-4xl md:text-5xl font-display font-medium text-dark-green uppercase">
+                        <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-medium text-dark-green uppercase">
                             {{ $title }}
                         </h2>
                     </div>
@@ -53,7 +53,7 @@
 
                             {{-- TEXT --}}
                             <div>
-                                <h3 class="text-[32px] font-display font-medium text-dark-yellow uppercase leading-[100%] -tracking-[0.32px] mb-3">
+                                <h3 class="text-2xl md:text-[32px] font-display font-medium text-dark-yellow uppercase leading-[100%] -tracking-[0.32px] mb-3">
                                     {{ $item->title }}
                                 </h3>
                                 <p class="text-davy-grey leading-relaxed">

@@ -15,7 +15,7 @@
         }
     @endphp
     <x-page-header :image="$image" :title="'Blog'" :postTitle="$title" />
-    <section class="mb-12 md:mb-28">
+    <section class="mb-14 md:mb-28 px-6 md:px-0">
         <div class="max-w-3xl mx-auto">
             @php
                 $content = '';

@@ -7,17 +7,17 @@
                 {{ $subtitle }}
             </p>
 
-            <h2 class="font-display font-medium text-4xl leading-tight text-dark-green md:text-5xl uppercase">
+            <h2 class="font-display font-medium text-3xl md:text-4xl leading-tight text-dark-green md:text-5xl uppercase">
                 {!! $title !!}
             </h2>
         </div>
         @foreach ($services as $service)
         <div class="grid grid-cols-1 gap-4 md:gap-16 lg:grid-cols-2 pt-2.5 pb-6 md:pb-12 border-t border-dashed border-black/20">
             <div class="relative flex items-center gap-6">
-                <div class="w-16 h-16">
+                <div class="min-w-16 h-16">
                     <img src="{{ $service->icon }}" alt="{{ $service->title }}" class="h-full w-full object-cover" />
                 </div>
-                <h3 class="font-display font-medium text-4xl text-dark-green uppercase">
+                <h3 class="font-display font-medium text-3xl md:text-4xl text-dark-green uppercase">
                     {{ $service->title }}
                 </h3>
             </div>

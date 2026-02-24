@@ -25,7 +25,7 @@
                     $phone = $slice->primary->call_us[0]->text ?? '';
                     $email = $slice->primary->email[0]->text ?? '';
                 @endphp
-                <section class="max-w-screen-2xl mx-auto px-6 mb-24">
+                <section class="max-w-screen-2xl mx-auto px-6 mb-14 md:mb-28">
                     <div class="flex justify-between pt-6 border-t border-dashed border-black/20">
                         <div class="flex flex-col">
                             <p class="font-bold text-dark-yellow uppercase mb-3">Location</p>

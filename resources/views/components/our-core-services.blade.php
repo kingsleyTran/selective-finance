@@ -1,4 +1,4 @@
-<section class="mb-12 md:mb-28">
+<section class="mb-14 md:mb-28">
     <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-4">
 
         {{-- LEFT CONTENT (sticky, follows scroll) --}}
@@ -7,7 +7,7 @@
                 Our Services
             </p>
 
-            <h2 class="text-4xl md:text-[56px] font-display font-medium text-dark-green mb-6 uppercase">
+            <h2 class="text-3xl md:text-4xl lg:text-[56px] font-display font-medium text-dark-green mb-6 uppercase">
                 {{ $title }}
             </h2>
 

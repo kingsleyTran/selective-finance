@@ -1,9 +1,9 @@
-<section class="mb-12 md:mb-28">
+<section class="mb-14 md:mb-28">
     <div class="mx-auto max-w-screen-2xl px-6">
 
         {{-- Header --}}
         <div class="mb-12 flex items-center justify-between">
-            <h2 class="font-display font-medium text-4xl md:text-[56px] leading-[130%] tracking-[-0.56px] text-dark-green uppercase">
+            <h2 class="font-display font-medium text-3xl md:text-4xl lg:text-[56px] leading-[130%] tracking-[-0.56px] text-dark-green uppercase">
                 {{ $title ?? 'OTHER SERVICES' }}
             </h2>
 

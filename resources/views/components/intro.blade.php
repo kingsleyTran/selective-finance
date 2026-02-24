@@ -1,10 +1,9 @@
-<section class="py-28">
+<section class="mb-14 md:mb-28">
     <div>
-
         {{-- Top content --}}
         <div class="flex flex-col md:flex-row md:justify-between mx-auto max-w-screen-2xl px-6">
             {{-- Headline --}}
-            <h2 class="font-display font-medium text-4xl md:text-5xl text-dark-green uppercase">
+            <h2 class="font-display font-medium text-4xl md:text-5xl text-dark-green uppercase mb-6 md:mb-0">
                 {!! $title !!}
             </h2>
 
@@ -15,7 +14,7 @@
         </div>
 
         {{-- Image slider --}}
-        <div class="mt-20 splide mx-auto max-w-screen-2xl pl-6" id="intro-slider" aria-label="Intro images">
+        <div class="mt-6 md:mt-20 splide mx-auto max-w-screen-2xl px-6 md:px-0 md:pl-6" id="intro-slider" aria-label="Intro images">
             <div class="splide__track">
                 <ul class="splide__list">
                     @foreach ($images as $image)
@@ -25,7 +24,7 @@
                         @endphp
                         @if ($url)
                             <li class="splide__slide">
-                                <img src="{{ $url }}" alt="{{ $alt }}" class="h-[480px] w-full rounded-sm object-cover" />
+                                <img src="{{ $url }}" alt="{{ $alt }}" class="h-[320px] md:h-[480px] w-full rounded-sm object-cover" />
                             </li>
                         @endif
                     @endforeach

@@ -1,4 +1,4 @@
-<section class="text-white mb-12 md:mb-28">
+<section class="text-white mb-14 md:mb-28">
     <div class="mx-auto max-w-screen-2xl px-6">
 
         {{-- TOP CONTENT --}}
@@ -7,7 +7,7 @@
         </p>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-16 mb-14">
             <div>
-                <h2 class="text-5xl lg:text-[56px] font-display font-medium text-dark-green uppercase">{{ $title }}</h2>
+                <h2 class="text-3xl md:text-4xl lg:text-[56px] font-display font-medium text-dark-green uppercase">{{ $title }}</h2>
             </div>
 
             <div class="text-davy-grey space-y-6 prose prose-invert max-w-none">

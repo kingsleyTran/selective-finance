@@ -59,6 +59,7 @@
             <nav class="flex flex-col gap-1">
                 <a href="/our-services" class="rounded-lg px-4 py-3 text-white transition hover:bg-white/10" @click="mobileOpen = false">Our Services</a>
                 <a href="/about-us" class="rounded-lg px-4 py-3 text-white transition hover:bg-white/10" @click="mobileOpen = false">About Us</a>
+                <a href="https://www.selectivefinance.com.au/calculators/" class="rounded-lg px-4 py-3 text-white transition hover:bg-white/10" @click="mobileOpen = false">Calculators</a>
                 <a href="/blogs" class="rounded-lg px-4 py-3 text-white transition hover:bg-white/10" @click="mobileOpen = false">Blog</a>
             </nav>
             <a href="/contact" class="mt-4 block w-full rounded-full bg-white px-8 py-3 text-center font-medium text-black transition hover:bg-gray-200" @click="mobileOpen = false">

@@ -66,6 +66,13 @@ document.addEventListener('DOMContentLoaded', () => {
             speed: 800,
             easing: 'ease-in-out',
             pauseOnHover: false,
+            breakpoints: {
+                640: {
+                    height: 320,
+                    autoWidth: false,
+                    perPage: 1,
+                },
+            },
         }).mount();
     }
 
@@ -101,6 +108,13 @@ document.addEventListener('DOMContentLoaded', () => {
             speed: 800,
             easing: 'ease-in-out',
             pauseOnHover: false,
+            breakpoints: {
+                640: {
+                    height: 320,
+                    autoWidth: false,
+                    perPage: 1,
+                },
+            },
         }).mount();
     }
 

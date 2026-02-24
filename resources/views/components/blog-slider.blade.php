@@ -1,8 +1,8 @@
-<section class="mb-12 md:mb-28">
+<section class="mb-14 md:mb-28">
     <div class="mx-auto max-w-screen-2xl">
         {{-- Header --}}
         <div class="mb-8 md:mb-16 flex items-center justify-between px-6">
-            <h2 class="font-display font-medium text-4xl md:text-[56px] leading-[130%] tracking-[-0.56px] text-dark-green uppercase">
+            <h2 class="font-display font-medium text-3xl md:text-4xl lg:text-[56px] leading-[130%] tracking-[-0.56px] text-dark-green uppercase">
                 {!! $title !!}
             </h2>
 
