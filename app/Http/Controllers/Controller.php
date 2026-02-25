@@ -40,6 +40,59 @@ abstract class Controller
                 'view' => 'blog.index',
             ],
         ];
+
+        // Load global configuration from Prismic (menu, footer_contact, footer_navigation)
+        $this->configuration = [];
+        $configuration = $prismic->getSingle('configuration');
+        if ($configuration && isset($configuration->data->body)) {
+            foreach ($configuration->data->body as $data) {
+                switch ($data->slice_type ?? '') {
+                    case 'menu':
+                        foreach ($data->items ?? [] as $item) {
+                            $this->configuration['menu'][] = (object) [
+                                'label' => $item->label[0]->text ?? '',
+                                'link' => $item->{'link-url'} ?? $item->link->url ?? '#',
+                                'hidden' => $item->hidden ?? false,
+                            ];
+                        }
+                        break;
+                    case 'footer_contact':
+                        $this->configuration['footer_contact'] = (object) [
+                            'title' => $data->primary->title->text ?? null,
+                            'email' => $data->primary->email->text ?? null,
+                            'phone_number' => $data->primary->phone_number->text ?? null,
+                            'address' => $data->primary->address->text ?? null,
+                        ];
+                        break;
+                    case 'footer_navigation':
+                        $items = [];
+                        foreach ($data->items ?? [] as $item) {
+                            $items[] = (object) [
+                                'label' => $item->label[0]->text ?? null,
+                                'link' => $item->link->url ?? $item->{'link-url'} ?? null,
+                            ];
+                        }
+                        $this->configuration['footer_navigation'] = (object) [
+                            'title' => $data->primary->title[0]->text ?? null,
+                            'items' => $items,
+                        ];
+                        break;
+                    case 'footer_connection':
+                        $items = [];
+                        foreach ($data->items ?? [] as $item) {
+                            $items[] = (object) [
+                                'label' => $item->label[0]->text ?? null,
+                                'link' => $item->link->url ?? $item->{'link-url'} ?? null,
+                            ];
+                        }
+                        $this->configuration['footer_connection'] = (object) [
+                            'title' => $data->primary->title[0]->text ?? null,
+                            'items' => $items,
+                        ];
+                        break;
+                }
+            }
+        }
     }
 
     /**

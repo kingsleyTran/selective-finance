@@ -79,28 +79,28 @@
             {{-- CONNECT --}}
             <div>
                 <p class="mb-6 font-bold text-sm text-dark-yellow tracking-[0.2em]">
-                    CONNECT
+                    {{ $footerConnection?->title ?? 'CONNECT' }}
                 </p>
 
                 <ul class="space-y-3 font-medium text-xl text-light-yellow tracking-[-0.32px]">
-                    <li>
-                        <a href="#" class="group inline-flex items-center gap-2 transition hover:text-[#C9A24D]">
-                            Linkedin
-                            <span class="transition group-hover:translate-x-1">↗</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="group inline-flex items-center gap-2 transition hover:text-[#C9A24D]">
-                            Youtube
-                            <span class="transition group-hover:translate-x-1">↗</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="group inline-flex items-center gap-2 transition hover:text-[#C9A24D]">
-                            Facebook
-                            <span class="transition group-hover:translate-x-1">↗</span>
-                        </a>
-                    </li>
+                    @forelse($footerConnection?->items ?? [] as $item)
+                        <li>
+                            <a href="{{ $item->link ?? '#' }}" class="group inline-flex items-center gap-2 transition hover:text-[#C9A24D]">
+                                {{ $item->label ?? '' }}
+                                <span class="transition group-hover:translate-x-1">↗</span>
+                            </a>
+                        </li>
+                    @empty
+                        <li>
+                            <a href="#" class="group inline-flex items-center gap-2 transition hover:text-[#C9A24D]">Linkedin <span class="transition group-hover:translate-x-1">↗</span></a>
+                        </li>
+                        <li>
+                            <a href="#" class="group inline-flex items-center gap-2 transition hover:text-[#C9A24D]">Youtube <span class="transition group-hover:translate-x-1">↗</span></a>
+                        </li>
+                        <li>
+                            <a href="#" class="group inline-flex items-center gap-2 transition hover:text-[#C9A24D]">Facebook <span class="transition group-hover:translate-x-1">↗</span></a>
+                        </li>
+                    @endforelse
                 </ul>
             </div>
         </div>
