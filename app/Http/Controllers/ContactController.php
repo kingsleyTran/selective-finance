@@ -12,14 +12,12 @@ use Illuminate\View\View;
 
 class ContactController extends Controller
 {
+    private const SINGLE_TYPE = 'contact_us';
+    private const VIEW = 'contact.show';
+
     public function show(PrismicService $prismic): View
     {
-        $page = $prismic->getSingle('contact_us');
-
-        return view('contact.show', [
-            'page' => $page,
-            'slices' => $page->data->body,
-        ]);
+        return $this->renderSingle($prismic, self::SINGLE_TYPE, self::VIEW);
     }
 
     public function store(Request $request): RedirectResponse|JsonResponse

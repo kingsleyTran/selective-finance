@@ -17,10 +17,15 @@
             <div class="hidden flex-row items-center gap-2 md:flex">
                 <nav
                     class="flex items-center gap-8 border border-white/20 rounded-full bg-white/10 px-10 py-3">
-                    <x-nav-link href="/our-services">Our Services</x-nav-link>
-                    <x-nav-link href="/about-us">About Us</x-nav-link>
-                    <x-nav-link href="https://www.selectivefinance.com.au/calculators/">Calculators</x-nav-link>
-                    <x-nav-link href="/blogs">Blog</x-nav-link>
+                    @forelse(array_filter($menuItems, fn($item) => empty($item->hidden)) as $item)
+                        <x-nav-link href="{{ $item->link ?? '#' }}">{{ $item->label ?? '' }}</x-nav-link>
+                    @empty
+                        <x-nav-link href="/">Home</x-nav-link>
+                        <x-nav-link href="/our-services">Our Services</x-nav-link>
+                        <x-nav-link href="/about-us">About Us</x-nav-link>
+                        <x-nav-link href="https://www.selectivefinance.com.au/calculators/">Calculators</x-nav-link>
+                        <x-nav-link href="/blogs">Blog</x-nav-link>
+                    @endforelse
                 </nav>
                 <a href="/contact" class="rounded-full bg-white px-8 py-3 font-medium text-black transition hover:bg-gray-200">
                     Contact Us
@@ -57,10 +62,14 @@
         @click.outside="mobileOpen = false">
         <div class="border-t border-white/20 px-4 pb-6 pt-4">
             <nav class="flex flex-col gap-1">
-                <a href="/our-services" class="rounded-lg px-4 py-3 text-white transition hover:bg-white/10" @click="mobileOpen = false">Our Services</a>
-                <a href="/about-us" class="rounded-lg px-4 py-3 text-white transition hover:bg-white/10" @click="mobileOpen = false">About Us</a>
-                <a href="https://www.selectivefinance.com.au/calculators/" class="rounded-lg px-4 py-3 text-white transition hover:bg-white/10" @click="mobileOpen = false">Calculators</a>
-                <a href="/blogs" class="rounded-lg px-4 py-3 text-white transition hover:bg-white/10" @click="mobileOpen = false">Blog</a>
+                @forelse(array_filter($menuItems, fn($item) => empty($item->hidden)) as $item)
+                    <a href="{{ $item->link ?? '#' }}" class="rounded-lg px-4 py-3 text-white transition hover:bg-white/10" @click="mobileOpen = false">{{ $item->label ?? '' }}</a>
+                @empty
+                    <a href="/our-services" class="rounded-lg px-4 py-3 text-white transition hover:bg-white/10" @click="mobileOpen = false">Our Services</a>
+                    <a href="/about-us" class="rounded-lg px-4 py-3 text-white transition hover:bg-white/10" @click="mobileOpen = false">About Us</a>
+                    <a href="https://www.selectivefinance.com.au/calculators/" class="rounded-lg px-4 py-3 text-white transition hover:bg-white/10" @click="mobileOpen = false">Calculators</a>
+                    <a href="/blogs" class="rounded-lg px-4 py-3 text-white transition hover:bg-white/10" @click="mobileOpen = false">Blog</a>
+                @endforelse
             </nav>
             <a href="/contact" class="mt-4 block w-full rounded-full bg-white px-8 py-3 text-center font-medium text-black transition hover:bg-gray-200" @click="mobileOpen = false">
                 Contact Us

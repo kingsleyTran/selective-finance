@@ -24,13 +24,13 @@
 </head>
 
 <body class="bg-light-yellow antialiased font-sans">
-    <x-navbar />
+    <x-navbar :menu-items="data_get($configuration, 'menu', [])" />
 
     <main>
       {{ $slot }}
     </main>
 
-    <x-footer />
+    <x-footer :configuration="$configuration ?? []" />
 
     @stack('scripts')
 </body>

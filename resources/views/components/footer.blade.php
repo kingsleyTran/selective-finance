@@ -11,50 +11,68 @@
             {{-- CONTACT --}}
             <div>
                 <p class="mb-6 font-bold text-sm text-dark-yellow tracking-[0.2em]">
-                    CONTACT
+                    {{ $footerContact?->title ?? 'CONTACT' }}
                 </p>
 
-                <p class="font-medium max-w-xs leading-relaxed md:text-xl text-light-yellow/60">
-                    4517 Washington Ave.<br>
-                    Manchester, Kentucky 39495
-                </p>
+                @if($footerContact && ($footerContact->address ?? null))
+                    <p class="font-medium max-w-xs leading-relaxed md:text-xl text-light-yellow/60">
+                        {!! nl2br(e($footerContact->address)) !!}
+                    </p>
+                @else
+                    <p class="font-medium max-w-xs leading-relaxed md:text-xl text-light-yellow/60">
+                        4517 Washington Ave.<br>
+                        Manchester, Kentucky 39495
+                    </p>
+                @endif
 
-                <p class="font-medium mt-4 md:text-xl text-light-yellow/60">
-                    (225) 555-0118
-                </p>
+                @if($footerContact && ($footerContact->phone_number ?? null))
+                    <p class="font-medium mt-4 md:text-xl text-light-yellow/60">
+                        {{ $footerContact->phone_number }}
+                    </p>
+                @else
+                    <p class="font-medium mt-4 md:text-xl text-light-yellow/60">
+                        (225) 555-0118
+                    </p>
+                @endif
 
-                <p class="font-medium mt-2 md:text-xl text-light-yellow/60">
-                    info@selectivefinance.com.au
-                </p>
+                @if($footerContact && ($footerContact->email ?? null))
+                    <p class="font-medium mt-2 md:text-xl text-light-yellow/60">
+                        <a href="mailto:{{ $footerContact->email }}" class="transition hover:text-dark-yellow">{{ $footerContact->email }}</a>
+                    </p>
+                @else
+                    <p class="font-medium mt-2 md:text-xl text-light-yellow/60">
+                        info@selectivefinance.com.au
+                    </p>
+                @endif
             </div>
 
             {{-- NAVIGATION --}}
             <div>
                 <p class="mb-6 font-bold text-sm text-dark-yellow tracking-[0.2em]">
-                    NAVIGATION
+                    {{ $footerNavigation?->title ?? 'NAVIGATION' }}
                 </p>
 
                 <ul class="space-y-4 font-medium text-2xl md:text-[32px] leading-[130%] tracking-[-0.32px]">
-                    <li>
-                        <a href="#" class="transition text-light-yellow hover:text-dark-yellow">
-                            Our Services
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="transition text-light-yellow hover:text-dark-yellow">
-                            About Us
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="transition text-light-yellow hover:text-dark-yellow">
-                            Blog
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="transition text-light-yellow hover:text-dark-yellow">
-                            Contact Us
-                        </a>
-                    </li>
+                    @forelse($footerNavigation?->items ?? [] as $item)
+                        <li>
+                            <a href="{{ $item->link ?? '#' }}" class="transition text-light-yellow hover:text-dark-yellow">
+                                {{ $item->label ?? '' }}
+                            </a>
+                        </li>
+                    @empty
+                        <li>
+                            <a href="/our-services" class="transition text-light-yellow hover:text-dark-yellow">Our Services</a>
+                        </li>
+                        <li>
+                            <a href="/about-us" class="transition text-light-yellow hover:text-dark-yellow">About Us</a>
+                        </li>
+                        <li>
+                            <a href="/blogs" class="transition text-light-yellow hover:text-dark-yellow">Blog</a>
+                        </li>
+                        <li>
+                            <a href="/contact" class="transition text-light-yellow hover:text-dark-yellow">Contact Us</a>
+                        </li>
+                    @endforelse
                 </ul>
             </div>
 

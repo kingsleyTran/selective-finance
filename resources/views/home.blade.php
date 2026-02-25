@@ -1,8 +1,12 @@
-<x-layouts.app :title="$page->data->seo_title">
+<x-layouts.app :configuration="$configuration" :title="$page->data->seo_title">
     @foreach ($slices as $slice)
         @switch($slice->slice_type)
             @case('hero_section')
                 @php
+                    $hidden = isset($slice->primary->hero_hidden) && $slice->primary->hero_hidden;
+                    if ($hidden) {
+                        break;
+                    }
                     $title = '';
                     if (isset($slice->primary->hero_title) && is_array($slice->primary->hero_title)) {
                         $titleParts = [];
@@ -35,10 +39,34 @@
                     :subtitle="$subtitle" />
                 @break
             @case('partner_section')
-                <x-partners :partners="$slice->items" />
+                @php
+                    $hidden = isset($slice->primary->partner_hidden) && $slice->primary->partner_hidden;
+                    if ($hidden) {
+                        break;
+                    }
+                    $title = '';
+                    if (isset($slice->primary->title) && is_array($slice->primary->title)) {
+                        $titleParts = [];
+                        foreach ($slice->primary->title as $block) {
+                            if (isset($block->text)) {
+                                $titleParts[] = e($block->text);
+                            }
+                        }
+                        $title = implode('<br>', $titleParts);
+                    } elseif (isset($slice->primary->title)) {
+                        $title = e($slice->primary->title);
+                    }
+                @endphp
+                @if (count($slice->items) > 0)
+                    <x-partners :partners="$slice->items" :title="$title" />
+                @endif
                 @break
             @case('about_us_section')
                 @php
+                    $hidden = isset($slice->primary->about_us_hidden) && $slice->primary->about_us_hidden;
+                    if ($hidden) {
+                        break;
+                    }
                     $title = '';
                     if (isset($slice->primary->title) && is_array($slice->primary->title)) {
                         $titleParts = [];
@@ -71,6 +99,10 @@
                 @break
             @case('our_services_section')
                 @php
+                    $hidden = isset($slice->primary->our_services_hidden) && $slice->primary->our_services_hidden;
+                    if ($hidden) {
+                        break;
+                    }
                     $title = '';
                     if (isset($slice->primary->title) && is_array($slice->primary->title)) {
                         $titleParts = [];
@@ -100,6 +132,10 @@
                 @break
             @case('why_choose_section')
                 @php
+                    $hidden = isset($slice->primary->why_choose_hidden) && $slice->primary->why_choose_hidden;
+                    if ($hidden) {
+                        break;
+                    }
                     $title = '';
                     if (isset($slice->primary->title) && is_array($slice->primary->title)) {
                         $titleParts = [];
@@ -143,6 +179,10 @@
                 @break
             @case('booking_section')
                 @php
+                    $hidden = isset($slice->primary->booking_hidden) && $slice->primary->booking_hidden;
+                    if ($hidden) {
+                        break;
+                    }
                     $title = '';
                     if (isset($slice->primary->title) && is_array($slice->primary->title)) {
                         $titleParts = [];
@@ -173,6 +213,10 @@
                 @break
             @case('testimonials_section')
                 @php
+                    $hidden = isset($slice->primary->testimonials_hidden) && $slice->primary->testimonials_hidden;
+                    if ($hidden) {
+                        break;
+                    }
                     $title = '';
                     if (isset($slice->primary->title) && is_array($slice->primary->title)) {
                         $titleParts = [];
@@ -202,6 +246,10 @@
                 @break
             @case('blogs_section')
                 @php
+                    $hidden = isset($slice->primary->blog_hidden) && $slice->primary->blog_hidden;
+                    if ($hidden) {
+                        break;
+                    }
                     $title = '';
                     if (isset($slice->primary->title) && is_array($slice->primary->title)) {
                         $titleParts = [];
@@ -219,6 +267,10 @@
                 @break
             @case('contact_section')
                 @php
+                    $hidden = isset($slice->primary->contact_hidden) && $slice->primary->contact_hidden;
+                    if ($hidden) {
+                        break;
+                    }
                     $title = '';
                     if (isset($slice->primary->title) && is_array($slice->primary->title)) {
                         $titleParts = [];

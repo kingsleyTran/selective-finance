@@ -1,7 +1,8 @@
 import './bootstrap';
 import Alpine from 'alpinejs'
-import '@splidejs/splide/css';
 import Splide from '@splidejs/splide';
+import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
+import '@splidejs/splide/css';
 
 window.Alpine = Alpine
 
@@ -136,6 +137,25 @@ document.addEventListener('DOMContentLoaded', () => {
                 640:  { perPage: 1 },
                 },
             }).mount();
+    }
+
+    const partnersSlider = document.querySelector('#partners-slider');
+    if (partnersSlider) {
+        new Splide(partnersSlider, {
+            type: 'loop',
+            perPage: 5,
+            perMove: 1,
+            gap: '2rem',
+            speed: 1,
+            arrows: false,
+            pagination: false,
+            pauseOnHover: false,
+            breakpoints: {
+                1024: { perPage: 4 },
+                768: { perPage: 3 },
+                640: { perPage: 2 },
+            },
+        }).mount({ AutoScroll });
     }
 
     const otherServicesSlider = document.querySelector('#other-services-slider');

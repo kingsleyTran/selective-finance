@@ -1,4 +1,4 @@
-<x-layouts.app :title="$page->data->seo_title">
+<x-layouts.app :configuration="$configuration" :title="$page->data->seo_title">
     @foreach ($slices as $slice)
         @switch($slice->slice_type)
             @case('header_section')

@@ -2,18 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Services\PrismicService;
 
 class PageController extends Controller
 {
+    private const SINGLE_TYPE = 'about_us';
+    private const VIEW = 'pages.about';
+
     public function about(PrismicService $prismic)
     {
-        $page = $prismic->getSingle('about_us');
-
-        return view('pages.about', [
-            'page' => $page,
-            'slices' => $page->data->body,
-        ]);
+        return $this->renderSingle($prismic, self::SINGLE_TYPE, self::VIEW);
     }
 }

@@ -2,29 +2,24 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Services\PrismicService;
 
 class BlogController extends Controller
 {
+    private const INDEX_TYPE = 'blog_page';
+    private const INDEX_VIEW = 'blog.index';
+    private const SHOW_TYPE = 'blogs';
+    private const SHOW_VIEW = 'blog.show';
+
     public function index(PrismicService $prismic)
     {
-        $page = $prismic->getSingle('blog_page');
-
-        return view('blog.index', [
-            'page' => $page,
-            'slices' => $page->data->body,
+        return $this->renderSingle($prismic, self::INDEX_TYPE, self::INDEX_VIEW, [
             'currentPage' => 1,
         ]);
     }
 
     public function show(PrismicService $prismic, string $slug)
     {
-        $page = $prismic->getByUID('blogs', $slug);
-        abort_if(!$page, 404);
-
-        return view('blog.show', [
-            'page' => $page,
-        ]);
+        return $this->renderByUID($prismic, self::SHOW_TYPE, $slug, self::SHOW_VIEW);
     }
 }

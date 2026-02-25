@@ -9,11 +9,20 @@ use Illuminate\View\Component;
 class Navbar extends Component
 {
     /**
-     * Create a new component instance.
+     * Menu items: array of objects with label, link, and optional hidden.
+     *
+     * @var array<int, object{label: string, link: string, hidden?: bool}>
      */
-    public function __construct()
+    public array $menuItems = [];
+
+    /**
+     * Create a new component instance.
+     *
+     * @param  array<int, object{label: string, link: string, hidden?: bool}>  $menuItems
+     */
+    public function __construct(array $menuItems = [])
     {
-        //
+        $this->menuItems = $menuItems;
     }
 
     /**

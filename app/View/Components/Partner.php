@@ -11,11 +11,13 @@ class Partner extends Component
     /**
      * @var array|\Illuminate\Support\Collection
      */
-    public $partners;
+    public array $partners;
+    public string $title;
 
-    public function __construct($partners = [])
+    public function __construct(array $partners = [], string $title = '')
     {
         $this->partners = is_array($partners) ? $partners : collect($partners)->all();
+        $this->title = $title ?? '';
     }
 
     public function render(): View|Closure|string

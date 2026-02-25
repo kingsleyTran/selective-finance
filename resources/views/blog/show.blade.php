@@ -1,4 +1,4 @@
-<x-layouts.app :title="$page->data->seo_title">
+<x-layouts.app :configuration="$configuration" :title="$page->data->seo_title">
     @php
         $image = $page->data->image->url ?? '';
         $title = '';
