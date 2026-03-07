@@ -122,6 +122,36 @@
                 @endphp
                 <x-your-need :title="$title" :description="$description" :items="$items" />
                 @break
+            @case('our_team')
+                @php
+                    $title = '';
+                    if (isset($slice->primary->title) && is_array($slice->primary->title)) {
+                        $titleParts = [];
+                        foreach ($slice->primary->title as $block) {
+                            if (isset($block->text)) {
+                                $titleParts[] = e($block->text);
+                            }
+                        }
+                        $title = implode('<br>', $titleParts);
+                    } elseif (isset($slice->primary->title)) {
+                        $title = e($slice->primary->title);
+                    }
+                    $members = $slice->items ?? [];
+                    $subtitle = '';
+                    if (isset($slice->primary->subtitle) && is_array($slice->primary->subtitle)) {
+                        $subtitleParts = [];
+                        foreach ($slice->primary->subtitle as $block) {
+                            if (isset($block->text)) {
+                                $subtitleParts[] = e($block->text);
+                            }
+                        }
+                        $subtitle = implode('<br>', $subtitleParts);
+                    } elseif (isset($slice->primary->subtitle)) {
+                        $subtitle = e($slice->primary->subtitle);
+                    }
+                @endphp
+                <x-our-team :title="$title" :subtitle="$subtitle" :members="$members" />
+                @break
         @endswitch
     @endforeach
 </x-layouts.app>

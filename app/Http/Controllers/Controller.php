@@ -58,10 +58,10 @@ abstract class Controller
                         break;
                     case 'footer_contact':
                         $this->configuration['footer_contact'] = (object) [
-                            'title' => $data->primary->title->text ?? null,
-                            'email' => $data->primary->email->text ?? null,
-                            'phone_number' => $data->primary->phone_number->text ?? null,
-                            'address' => $data->primary->address->text ?? null,
+                            'title' => $data->primary->title[0]->text ?? null,
+                            'email' => $data->primary->email[0]->text ?? null,
+                            'phone_number' => $data->primary->phone_number[0]->text ?? null,
+                            'address' => $data->primary->address[0]->text ?? null,
                         ];
                         break;
                     case 'footer_navigation':

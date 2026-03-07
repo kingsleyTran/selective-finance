@@ -10,7 +10,7 @@
         <div class="grid gap-12 md:grid-cols-3 py-8">
             {{-- CONTACT --}}
             <div>
-                <p class="mb-6 font-bold text-sm text-dark-yellow tracking-[0.2em]">
+                <p class="mb-6 font-bold text-sm text-dark-yellow tracking-[0.2em] uppercase">
                     {{ $footerContact?->title ?? 'CONTACT' }}
                 </p>
 
@@ -48,7 +48,7 @@
 
             {{-- NAVIGATION --}}
             <div>
-                <p class="mb-6 font-bold text-sm text-dark-yellow tracking-[0.2em]">
+                <p class="mb-6 font-bold text-sm text-dark-yellow tracking-[0.2em] uppercase">
                     {{ $footerNavigation?->title ?? 'NAVIGATION' }}
                 </p>
 
@@ -78,7 +78,7 @@
 
             {{-- CONNECT --}}
             <div>
-                <p class="mb-6 font-bold text-sm text-dark-yellow tracking-[0.2em]">
+                <p class="mb-6 font-bold text-sm text-dark-yellow tracking-[0.2em] uppercase">
                     {{ $footerConnection?->title ?? 'CONNECT' }}
                 </p>
 

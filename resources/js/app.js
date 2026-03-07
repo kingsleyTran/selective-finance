@@ -158,6 +158,27 @@ document.addEventListener('DOMContentLoaded', () => {
         }).mount({ AutoScroll });
     }
 
+    const ourTeamSlider = document.querySelector('#our-team-slider');
+    if (ourTeamSlider) {
+        new Splide(ourTeamSlider, {
+            type: 'loop',
+            perPage: 3,
+            perMove: 1,
+            gap: '1.5rem',
+            arrows: false,
+            pagination: false,
+            autoplay: true,
+            interval: 4000,
+            speed: 600,
+            easing: 'ease',
+            breakpoints: {
+                1024: { perPage: 3 },
+                768: { perPage: 2 },
+                640: { perPage: 1 },
+            },
+        }).mount();
+    }
+
     const otherServicesSlider = document.querySelector('#other-services-slider');
     if (otherServicesSlider) {
         const otherServicesSplide = new Splide(otherServicesSlider, {
