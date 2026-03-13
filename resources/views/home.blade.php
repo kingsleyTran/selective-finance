@@ -130,6 +130,23 @@
                 @endphp
                 <x-our-core-services :title="$title" :subtitle="$subtitle" :services="$slice->items ?? []" />
                 @break
+            @case('banks_section')
+                @php
+                    $title = '';
+                    if (isset($slice->primary->title) && is_array($slice->primary->title)) {
+                        $titleParts = [];
+                        foreach ($slice->primary->title as $block) {
+                            if (isset($block->text)) {
+                                $titleParts[] = e($block->text);
+                            }
+                        }
+                        $title = implode('<br>', $titleParts);
+                    } elseif (isset($slice->primary->title)) {
+                        $title = e($slice->primary->title);
+                    }
+                @endphp
+                <x-banks :title="$title" :banks="$slice->items ?? []" />
+                @break
             @case('why_choose_section')
                 @php
                     $hidden = isset($slice->primary->why_choose_hidden) && $slice->primary->why_choose_hidden;
@@ -177,6 +194,23 @@
                 @endphp
                 <x-promo :title="$title" :subtitle="$subtitle" :description="$description" :image="$image" :items="$items" />
                 @break
+            @case('google_review_section')
+                @php
+                    $title = '';
+                    if (isset($slice->primary->title) && is_array($slice->primary->title)) {
+                        $titleParts = [];
+                        foreach ($slice->primary->title as $block) {
+                            if (isset($block->text)) {
+                                $titleParts[] = e($block->text);
+                            }
+                        }
+                        $title = implode('<br>', $titleParts);
+                    } elseif (isset($slice->primary->title)) {
+                        $title = e($slice->primary->title);
+                    }
+                @endphp
+                <x-google-review :title="$title" />
+                @break   
             @case('booking_section')
                 @php
                     $hidden = isset($slice->primary->booking_hidden) && $slice->primary->booking_hidden;

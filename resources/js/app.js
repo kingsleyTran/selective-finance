@@ -158,6 +158,25 @@ document.addEventListener('DOMContentLoaded', () => {
         }).mount({ AutoScroll });
     }
 
+    const banksSlider = document.querySelector('#banks-slider');
+    if (banksSlider) {
+        new Splide(banksSlider, {
+            type: 'loop',
+            perPage: 5,
+            perMove: 1,
+            gap: '2rem',
+            speed: 1,
+            arrows: false,
+            pagination: false,
+            pauseOnHover: false,
+            breakpoints: {
+                1024: { perPage: 4 },
+                768: { perPage: 3 },
+                640: { perPage: 2 },
+            },
+        }).mount({ AutoScroll });
+    }
+
     const ourTeamSlider = document.querySelector('#our-team-slider');
     if (ourTeamSlider) {
         new Splide(ourTeamSlider, {
