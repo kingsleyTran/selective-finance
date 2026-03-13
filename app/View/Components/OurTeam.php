@@ -28,6 +28,7 @@ class OurTeam extends Component
                 'avatar' => is_object($member) ? ($member->avatar->url ?? '') : ($member['avatar'] ?? ''),
                 'phone_number' => is_object($member) ? ($member->phone_number[0]->text ?? '') : ($member['phone_number'] ?? ''),
                 'email' => is_object($member) ? ($member->email[0]->text ?? '') : ($member['email'] ?? ''),
+                'bio' => is_object($member) ? ($member->bio[0]->text ?? '') : ($member['bio'] ?? ''),
             ];
         }
     }

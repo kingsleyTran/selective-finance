@@ -210,7 +210,7 @@
                     }
                 @endphp
                 <x-google-review :title="$title" />
-                @break   
+                @break
             @case('booking_section')
                 @php
                     $hidden = isset($slice->primary->booking_hidden) && $slice->primary->booking_hidden;
