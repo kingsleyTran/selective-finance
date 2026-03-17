@@ -17,7 +17,7 @@
                     {!! $description !!}
                 </div>
 
-                <a href="#"
+                <a href="#let-connect"
                     class="inline-flex items-center justify-center rounded-full bg-white px-8 py-3 text-sm font-medium text-black transition hover:bg-neutral-200">
                     Schedule a Session
                 </a>

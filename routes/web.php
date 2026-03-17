@@ -19,3 +19,7 @@ Route::get('/blogs/{slug}', [BlogController::class, 'show'])->name('blog.show');
 
 Route::get('/contact-us', [ContactController::class, 'show'])->name('contact');
 Route::post('/contact-us', [ContactController::class, 'store'])->name('contact.submit');
+Route::get('/contact', [ContactController::class, 'show'])->name('contact');
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.submit');
+
+Route::get('/terms', [PageController::class, 'terms'])->name('terms');

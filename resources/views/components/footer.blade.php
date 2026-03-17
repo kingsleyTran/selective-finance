@@ -111,7 +111,7 @@
         <div class="mx-auto flex flex-col items-center justify-between gap-4 pt-6 font-medium text-light-yellow/60 md:flex-row">
             <p>© Copyright 2025 Selective Finance. All Rights Reserved</p>
 
-            <a href="#" class="transition hover:text-[#C9A24D]">
+            <a href="{{ route('terms') }}" class="transition hover:text-[#C9A24D]">
                 Terms + Conditions
             </a>
         </div>

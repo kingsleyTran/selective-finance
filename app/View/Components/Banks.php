@@ -18,9 +18,17 @@ class Banks extends Component
     {
         $this->title = $title;
         foreach ($banks as $bank) {
+            $name = '';
+            if (isset($bank->name) && is_array($bank->name) && isset($bank->name[0]->text)) {
+                $name = $bank->name[0]->text;
+            }
+            $logo = '';
+            if (isset($bank->logo) && is_object($bank->logo) && isset($bank->logo->url)) {
+                $logo = $bank->logo->url;
+            }
             $this->banks[] = (object) [
-                'name' => $bank->name[0]->text,
-                'logo' => $bank->logo->url,
+                'name' => $name,
+                'logo' => $logo,
             ];
         }
     }
