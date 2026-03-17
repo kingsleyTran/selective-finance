@@ -18,8 +18,8 @@
                             $alt = $img->alt ?? '';
                         @endphp
                         @if ($url)
-                            <li class="splide__slide flex items-center justify-center">
-                                <img src="{{ $url }}" alt="{{ $alt }}" class="max-h-12 w-auto object-contain grayscale opacity-70 transition hover:grayscale-0 hover:opacity-100" />
+                            <li class="splide__slide flex h-20 items-center justify-center px-2 md:px-3">
+                                <img src="{{ $url }}" alt="{{ $alt }}" class="h-12 w-40 max-w-full object-contain grayscale opacity-70 transition hover:grayscale-0 hover:opacity-100" />
                             </li>
                         @endif
                     @endforeach
