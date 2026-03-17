@@ -2,7 +2,7 @@
 
 @if (count($partners) > 0)
 <section class="md:pb-5 mb-12 px-6">
-    <div class="bg-[#fcfcfc] mix-blend-multiply mx-auto max-w-screen-2xl px-6 py-10 mb-5 overflow-hidden">
+    <div class="bg-[#fcfcfc] mix-blend-multiply mx-auto max-w-screen-2xl px-6 py-[69px] mb-5 overflow-hidden">
         <div class="max-w-2xl mx-auto mb-6 md:mb-10">
             <h2 class="text-center text-3xl md:text-4xl lg:text-[56px] font-display font-medium text-dark-green uppercase">
                 {{ $title }}

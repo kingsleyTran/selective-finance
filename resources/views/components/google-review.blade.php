@@ -18,12 +18,11 @@
     background: transparent !important;
 }
 
-/* Keep cards transparent but avoid touching interactive button overlays */
+/* Keep review surfaces white while preserving button overlays */
 .google-review-widget [class*="Review"],
-.google-review-widget [class*="review"],
 .google-review-widget [class*="Card"],
 .google-review-widget [class*="card"] {
-    background: transparent !important;
+    background: white !important;
     box-shadow: none !important;
 }
 
@@ -39,7 +38,7 @@
     font-family: inherit !important;
 }
 
-/* Force transparent background for Elfsight header wrappers */
+/* Force white background for Elfsight header wrappers */
 .google-review-widget .es-header-container,
 .google-review-widget .HeaderContainer__Inner-sc-4da6b4d0-0,
 .google-review-widget .HeaderComponent__StyledHeader-sc-82145d0b-0,

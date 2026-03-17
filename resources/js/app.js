@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const ourTeamSlider = document.querySelector('#our-team-slider');
     if (ourTeamSlider) {
-        new Splide(ourTeamSlider, {
+        const ourTeamSplide = new Splide(ourTeamSlider, {
             type: 'loop',
             perPage: 3,
             perMove: 1,
@@ -188,14 +188,23 @@ document.addEventListener('DOMContentLoaded', () => {
             pagination: false,
             autoplay: true,
             interval: 4000,
-            speed: 600,
-            easing: 'ease',
+            speed: 800,
+            easing: 'cubic-bezier(0.22, 1, 0.36, 1)',
             breakpoints: {
                 1024: { perPage: 3 },
                 768: { perPage: 2 },
                 640: { perPage: 1 },
             },
-        }).mount();
+        });
+
+        ourTeamSplide.mount();
+
+        const teamSection = ourTeamSlider.closest('section');
+        const prevBtn = teamSection?.querySelector('.splide-prev');
+        const nextBtn = teamSection?.querySelector('.splide-next');
+
+        if (prevBtn) prevBtn.addEventListener('click', () => ourTeamSplide.go('<'));
+        if (nextBtn) nextBtn.addEventListener('click', () => ourTeamSplide.go('>'));
     }
 
     const otherServicesSlider = document.querySelector('#other-services-slider');
